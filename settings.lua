@@ -26,21 +26,85 @@ Original addon version: http://toxila.googlecode.com/svn/zips/sFilter/
 ]]
 
 ns.spells = {
-	["SHAMAN"] = {
-		-- Lava Flows
-		{spellId = 65264, size = 24, alpha = 0.7, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"CENTER", UIParent, "CENTER", -190, -52}},
-		
+	["SHAMAN"] = {		
 		-- Water Shield
-		{spellId = 57960, size = 24, alpha = 0.7, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"CENTER", UIParent, "CENTER", -216, -52}},
+		{spellId = 57960, size = 24, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, -18}},
+
+		-- Flame Shock
+		{spellId = 49233, size = 24, alpha = 1, unitId = "target", isMine = 1, filter = "HARMFUL", setPoint = {"TOPRIGHT", TargetFrame, "TOPLEFT", 0, -22}},
+
+		-- Dying Curse
+		{spellId = 60494, size = 30, alpha = 0.7, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, 8}},
+
+		-- Talisman of Resurgence
+		{spellId = 67684, size = 30, alpha = 0.7, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -40, 8}},
 	},
 
 	["DEATHKNIGHT"] = {},
 	["DRUID"] = {},
-	["HUNTER"] = {},
+	["HUNTER"] = {
+		-- Aspect of the Hawk
+		{spellId = 13165, size = 24, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, -18}},
+
+		-- Other Aspects
+		{spellId = 5118, spellId2 = 13159, size = 36, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", 4, -18}},
+
+		-- Sniper Training, Improved Steady Shot, Focus Fire
+		{spellId = 64420, spellId2 = 53220, spellId3 = 82692, size = 24, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -34, -18}},
+
+		-- Pet Frenzy
+		{spellId = 19615, size = 24, alpha = 1, unitId = "pet", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -60, -18}},
+
+		-- Fire! (Master Marksman Proc)
+		{spellId = 82926, size = 36, alpha = 0.65, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, 8}},
+
+
+		-- Serpent Sting
+		{spellId = 1978, size = 24, alpha = 1, unitId = "target", isMine = 1, filter = "HARMFUL", setPoint = {"TOPRIGHT", TargetFrame, "TOPLEFT", 0, -22}},
+
+		-- Hunter's Mark
+		{spellId = 1130, spellId2 = 88691, size = 24, alpha = 1, unitId = "target", isMine = 0, filter = "HARMFUL", setPoint = {"BOTTOMLEFT", TargetFrame, "TOPLEFT", 6, -18}},
+	},
 	["MAGE"] = {},
 	["PALADIN"] = {},
-	["PRIEST"] = {},
-	["ROGUE"] = {},
+	["PRIEST"] = {
+		-- Inner Fire
+		{spellId = 25431, size = 24, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, -18}},
+
+		-- PW: Shield
+		{spellId = 25218, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -34, -18}},
+
+		-- SW: Pain
+		{spellId = 25368, size = 24, alpha = 1, unitId = "target", isMine = 1, filter = "HARMFUL", setPoint = {"BOTTOMLEFT", TargetFrame, "TOPLEFT", 6, -18}},
+
+		-- Vampiric Touch
+		{spellId = 34917, size = 24, alpha = 1, unitId = "target", isMine = 1, filter = "HARMFUL", setPoint = {"BOTTOMLEFT", TargetFrame, "TOPLEFT", 32, -18}},
+
+		-- Devouring Plague
+		{spellId = 25467, size = 24, alpha = 1, unitId = "target", isMine = 1, filter = "HARMFUL", setPoint = {"BOTTOMLEFT", TargetFrame, "TOPLEFT", 58, -18}},
+	},
+	["ROGUE"] = {
+		-- Stealth / Dance / Vanish
+		{spellId = 1784, spellId2 = 51713, spellId3 = 11327, size = 36, alpha = 0.65, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, 8}},
+
+		-- Slice and Dice
+		{spellId = 5171, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, -18}},
+
+		-- Recuperate
+		{spellId = 73651, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -34, -18}},
+
+		-- Rupture
+		{spellId = 1943, size = 24, alpha = 1, unitId = "target", isMine = 1, filter = "HARMFUL", setPoint = {"TOPRIGHT", TargetFrame, "TOPLEFT", 0, -22}},
+	},
 	["WARLOCK"] = {},
-	["WARRIOR"] = {},
+	["WARRIOR"] = {
+		-- Battle Shout
+		{spellId = 47436, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, -18}},
+
+		-- Commanding Shout
+		{spellId = 47440, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -34, -18}},
+
+		-- Rend
+		{spellId = 47465, size = 24, alpha = 1, unitId = "target", isMine = 1, filter = "HARMFUL", setPoint = {"TOPRIGHT", TargetFrame, "TOPLEFT", 0, -22}},
+	},
 }
