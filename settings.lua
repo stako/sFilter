@@ -85,7 +85,7 @@ ns.spells = {
 	},
 	["ROGUE"] = {
 		-- Stealth / Dance / Vanish
-		{spellId = 1784, spellId2 = 51713, spellId3 = 11327, size = 36, alpha = 0.65, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, 8}},
+		{spellId = 1784, spellId2 = 51713, spellId3 = 11327, size = 36, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, 8}},
 
 		-- Slice and Dice
 		{spellId = 5171, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, -18}},
