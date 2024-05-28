@@ -56,7 +56,7 @@ ns.spells = {
 		{spellId = 19615, size = 24, alpha = 1, unitId = "pet", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -60, -18}},
 
 		-- Fire! (Master Marksman Proc)
-		{spellId = 82926, size = 36, alpha = 0.65, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, 8}},
+		-- {spellId = 82926, size = 36, alpha = 0.65, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, 8}},
 
 
 		-- Serpent Sting
@@ -84,8 +84,8 @@ ns.spells = {
 		{spellId = 25467, size = 24, alpha = 1, unitId = "target", isMine = 1, filter = "HARMFUL", setPoint = {"BOTTOMLEFT", TargetFrame, "TOPLEFT", 58, -18}},
 	},
 	["ROGUE"] = {
-		-- Stealth / Dance / Vanish
-		{spellId = 1784, spellId2 = 51713, spellId3 = 11327, size = 36, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, 8}},
+		-- Stealth / Dance / Vanish / Envenom / Deep Insight
+		{spellId = 1784, spellId2 = 51713, spellId3 = 11327, spellId4 = 32645, spellId5 = 84747, size = 36, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, 8}},
 
 		-- Slice and Dice
 		{spellId = 5171, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, -18}},
@@ -93,8 +93,14 @@ ns.spells = {
 		-- Recuperate
 		{spellId = 73651, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -34, -18}},
 
+		-- Blade Flurry / Overkill
+		{spellId = 13877, spellId2 = 58427, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"TOPLEFT", PlayerFrame, "TOPRIGHT", 0, -22}},
+
 		-- Rupture
 		{spellId = 1943, size = 24, alpha = 1, unitId = "target", isMine = 1, filter = "HARMFUL", setPoint = {"TOPRIGHT", TargetFrame, "TOPLEFT", 0, -22}},
+
+		-- Revealing Strike
+		{spellId = 84617, size = 24, alpha = 1, unitId = "target", isMine = 1, filter = "HARMFUL", setPoint = {"BOTTOMLEFT", TargetFrame, "TOPLEFT", 6, -18}},
 	},
 	["WARLOCK"] = {},
 	["WARRIOR"] = {
