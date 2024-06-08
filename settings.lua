@@ -26,12 +26,15 @@ Original addon version: http://toxila.googlecode.com/svn/zips/sFilter/
 ]]
 
 ns.spells = {
-	["SHAMAN"] = {		
-		-- Water Shield
-		{spellId = 57960, size = 24, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, -18}},
+	["SHAMAN"] = {
+		-- Water Shield, Earth Shield
+		{spellId = 52127, spellId2 = 974, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, -18}},
+
+		-- Tidal Waves
+		{spellId = 53390, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -34, -18}},
 
 		-- Flame Shock
-		{spellId = 49233, size = 24, alpha = 1, unitId = "target", isMine = 1, filter = "HARMFUL", setPoint = {"TOPRIGHT", TargetFrame, "TOPLEFT", 0, -22}},
+		{spellId = 8050, size = 24, alpha = 1, unitId = "target", isMine = 1, filter = "HARMFUL", setPoint = {"TOPRIGHT", TargetFrame, "TOPLEFT", 0, -22}},
 
 		-- Dying Curse
 		{spellId = 60494, size = 30, alpha = 0.7, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, 8}},
@@ -43,8 +46,8 @@ ns.spells = {
 	["DEATHKNIGHT"] = {},
 	["DRUID"] = {},
 	["HUNTER"] = {
-		-- Aspect of the Hawk
-		{spellId = 13165, size = 24, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, -18}},
+		-- Aspect of the Hawk, Aspect of the Fox
+		{spellId = 13165, spellId2 = 82661, size = 24, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", -8, -18}},
 
 		-- Other Aspects
 		{spellId = 5118, spellId2 = 13159, size = 36, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", PlayerFrame, "TOPRIGHT", 4, -18}},
