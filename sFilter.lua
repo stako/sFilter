@@ -115,13 +115,15 @@ local function sFilter_CreateFrame(data)
 end
 
 local class = select(2, UnitClass("player"))
-if spells and spells[class] then
-	for index in pairs(spells) do
-		if index ~= class then
-			spells[index] = nil
-		end
+
+if spells then
+	for _, data in ipairs(spells["GENERAL"]) do
+		sFilter_CreateFrame(data)
 	end
-	for i=1, #spells[class], 1 do
-		sFilter_CreateFrame(spells[class][i])
+
+	if spells[class] then
+		for _, data in ipairs(spells[class]) do
+			sFilter_CreateFrame(data)
+		end
 	end
 end
