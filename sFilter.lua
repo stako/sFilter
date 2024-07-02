@@ -58,8 +58,8 @@ local function sFilter_OnEvent(self, event, ...)
 	end
 end
 
-local function sFilter_CreateFrame(data)
-	local frame = CreateFrame("Frame", "sFilter_" .. data.unitId .. "_" .. data.spells[1], UIParent)
+local function sFilter_CreateFrame(category, id, data)
+	local frame = CreateFrame("Frame", "sFilter_" .. category .. "_" .. id, UIParent)
 	frame.data = data
 	data.spellName, _, data.spellIcon = GetSpellInfo(data.spells[1])
 	frame:SetAlpha(data.alpha)
@@ -96,13 +96,13 @@ end
 local class = select(2, UnitClass("player"))
 
 if spells then
-	for _, data in ipairs(spells["GENERAL"]) do
-		sFilter_CreateFrame(data)
+	for id, data in ipairs(spells["GENERAL"]) do
+		sFilter_CreateFrame("GENERAL", id, data)
 	end
 
 	if spells[class] then
-		for _, data in ipairs(spells[class]) do
-			sFilter_CreateFrame(data)
+		for id, data in ipairs(spells[class]) do
+			sFilter_CreateFrame(class, id, data)
 		end
 	end
 end
