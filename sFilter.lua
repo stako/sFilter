@@ -68,8 +68,8 @@ local function sFilter_CreateFrame(category, id, data)
 	frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 	frame:SetScript("OnEvent", sFilter_OnEvent)
 
-	local icon = frame:CreateTexture("$parentIcon", "BACKGROUND")
-	icon:SetAllPoints(frame)
+	local icon = frame:CreateTexture("$parentIcon", "ARTWORK")
+	icon:SetAllPoints()
 	-- icon:SetTexCoord(0.07, 0.93, 0.07, 0.93)
 	frame.icon = icon
 
@@ -79,10 +79,9 @@ local function sFilter_CreateFrame(category, id, data)
 	count:SetJustifyH("CENTER")
 	frame.count = count
 
-	local cooldown = CreateFrame("Cooldown", nil, frame, "CooldownFrameTemplate")
+	local cooldown = CreateFrame("Cooldown", "$parentCooldown", frame, "CooldownFrameTemplate")
 	cooldown:SetReverse(true)
 	cooldown:SetDrawEdge(true)
-	-- cooldown:SetAllPoints(frame.icon)
 	cooldown:SetPoint("TOPLEFT", 1, -1)
 	cooldown:SetPoint("BOTTOMRIGHT", -1, 1)
 	cooldown:SetHideCountdownNumbers(true)
