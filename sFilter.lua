@@ -9,7 +9,7 @@ local _, ns = ...
 
 local spells = ns.spells
 
-local MyUnits = {
+local myUnits = {
 	player = true,
 	vehicle = true,
 	pet = true,
@@ -30,7 +30,7 @@ local function sFilter_OnEvent(self, event, ...)
 
 			local spellPriority = iconData.spells[spellId]
 
-			if (iconData.isMine ~= 1 or MyUnits[caster]) and spellPriority and spellPriority < priority then
+			if (iconData.isMine ~= 1 or myUnits[caster]) and spellPriority and spellPriority < priority then
 				spellData = {
 					icon = icon,
 					count = count,
