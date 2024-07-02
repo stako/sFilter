@@ -13,7 +13,7 @@ Each entry creates a separate icon. Entry is a table with values in it:
 Original addon version: http://toxila.googlecode.com/svn/zips/sFilter/
 ]]
 
-ns.spells = {
+ns.icons = {
 	["GENERAL"] = {
 		-- Rocket Fuel Leak
 		{spells = {94794}, size = 40, alpha = 1, unitId = "player", isMine = 0, filter = "HARMFUL", setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 100, 0}},

@@ -7,8 +7,6 @@
 
 local _, ns = ...
 
-local spells = ns.spells
-
 local myUnits = {
 	player = true,
 	vehicle = true,
@@ -92,13 +90,15 @@ end
 
 local class = select(2, UnitClass("player"))
 
-if spells then
-	for id, data in ipairs(spells["GENERAL"]) do
-		sFilter_CreateFrame("GENERAL", id, data)
+if ns.icons then
+	if ns.icons["GENERAL"] then
+		for id, data in ipairs(ns.icons["GENERAL"]) do
+			sFilter_CreateFrame("GENERAL", id, data)
+		end
 	end
 
-	if spells[class] then
-		for id, data in ipairs(spells[class]) do
+	if ns.icons[class] then
+		for id, data in ipairs(ns.icons[class]) do
 			sFilter_CreateFrame(class, id, data)
 		end
 	end
