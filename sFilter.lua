@@ -61,10 +61,8 @@ end
 local function sFilter_CreateFrame(category, id, data)
 	local frame = CreateFrame("Frame", "sFilter_" .. category .. "_" .. id, UIParent)
 	frame.data = data
-	data.spellName, _, data.spellIcon = GetSpellInfo(data.spells[1])
 	frame:SetAlpha(data.alpha)
-	frame:SetWidth(data.size)
-	frame:SetHeight(data.size)
+	frame:SetSize(data.size, data.size)
 	frame:SetPoint(unpack(data.setPoint))
 	frame:RegisterEvent("UNIT_AURA")
 	frame:RegisterEvent("PLAYER_TARGET_CHANGED")
@@ -73,7 +71,6 @@ local function sFilter_CreateFrame(category, id, data)
 
 	frame.icon = frame:CreateTexture("$parentIcon", "BACKGROUND")
 	frame.icon:SetAllPoints(frame)
-	frame.icon:SetTexture(data.spellIcon)
 	-- frame.icon:SetTexCoord(0.07, 0.93, 0.07, 0.93)
 
 	frame.count = frame:CreateFontString(nil, "OVERLAY")
