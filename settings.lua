@@ -28,66 +28,66 @@ Original addon version: http://toxila.googlecode.com/svn/zips/sFilter/
 ns.spells = {
 	["GENERAL"] = {
 		-- Rocket Fuel Leak
-		{spellId = 94794, size = 40, alpha = 1, unitId = "player", isMine = 0, filter = "HARMFUL", setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 100, 0}},
+		{spells = {94794}, size = 40, alpha = 1, unitId = "player", isMine = 0, filter = "HARMFUL", setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 100, 0}},
 
 		-- Divine Shield, Deterrence, Hand of Protection, Hand of Sacrifice, Roar of Sacrifice
-		{spellId = 642, spellId2 = 19263, spellId3 = 1022, spellId4 = 6940, spellId5 = 53480, size = 40, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 42}},
+		{spells = {642, 19263, 1022, 6940, 53480}, size = 40, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 42}},
 	},
 	["SHAMAN"] = {
 		-- Water Shield, Earth Shield
-		{spellId = 52127, spellId2 = 974, size = 40, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
+		{spells = {52127, 974}, size = 40, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
 
 		-- Tidal Waves
-		{spellId = 53390, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 106, 32}},
+		{spells = {53390}, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 106, 32}},
 
 		-- Spiritwalker's Grace
-		{spellId = 79206, size = 40, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, -42}},
+		{spells = {79206}, size = 40, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, -42}},
 
 		-- Grounding Totem Effect
-		{spellId = 8178, size = 40, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -142, 0}},
+		{spells = {8178}, size = 40, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -142, 0}},
 	},
 	["DEATHKNIGHT"] = {},
 	["DRUID"] = {},
 	["HUNTER"] = {
 		-- Aspect of the Hawk, Aspect of the Fox, Aspect of the Wild
-		{spellId = 13165, spellId2 = 82661, spellId3 = 20043, size = 24, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 106, 32}},
+		{spells = {13165, 82661, 20043}, size = 24, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 106, 32}},
 
 		-- Aspect of the Pack, Aspect of the Cheetah, Camouflage
-		{spellId = 5118, spellId2 = 13159, spellId3 = 51755, size = 40, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
+		{spells = {5118, 13159, 51755}, size = 40, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
 
 		-- Fire!
-		{spellId = 82926, size = 40, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, -42}},
+		{spells = {82926}, size = 40, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, -42}},
 
 		-- Sniper Training, Improved Steady Shot, Focus Fire
-		{spellId = 64420, spellId2 = 53220, spellId3 = 82692, size = 24, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 132, 32}},
+		{spells = {64420, 53220, 82692}, size = 24, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 132, 32}},
 
 		-- Serpent Sting
-		{spellId = 1978, spellId2 = 88453, size = 24, alpha = 1, unitId = "target", isMine = 1, filter = "HARMFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 176, 32}},
+		{spells = {1978, 88453}, size = 24, alpha = 1, unitId = "target", isMine = 1, filter = "HARMFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 176, 32}},
 
 		-- Hunter's Mark
-		{spellId = 1130, spellId2 = 88691, size = 24, alpha = 1, unitId = "target", isMine = 0, filter = "HARMFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 202, 32}},
-		
+		{spells = {1130, 88691}, size = 24, alpha = 1, unitId = "target", isMine = 0, filter = "HARMFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 202, 32}},
+
 		-- Mend Pet
-		{spellId = 136, size = 24, alpha = 1, unitId = "pet", isMine = 0, filter = "HELPFUL", setPoint = {"LEFT", PetFrame, "RIGHT", -8, -4}},
+		{spells = {136}, size = 24, alpha = 1, unitId = "pet", isMine = 0, filter = "HELPFUL", setPoint = {"LEFT", PetFrame, "RIGHT", -8, -4}},
 	},
 	["MAGE"] = {},
 	["PALADIN"] = {},
 	["PRIEST"] = {},
 	["ROGUE"] = {
 		-- Stealth / Dance / Vanish / Envenom / Deep Insight
-		{spellId = 1784, spellId2 = 51713, spellId3 = 11327, spellId4 = 32645, spellId5 = 84747, size = 40, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
+		{spells = {1784, 51713, 11327, 32645, 84747}, size = 40, alpha = 1, unitId = "player", isMine = 1, filter = "HELPFUL", setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
 
 		-- Blade Flurry / Overkill
-		{spellId = 13877, spellId2 = 58427, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 158, 32}},
+		{spells = {13877, 58427}, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 158, 32}},
 
 		-- Slice and Dice
-		{spellId = 5171, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 132, 32}},
+		{spells = {5171}, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 132, 32}},
 
 		-- Recuperate
-		{spellId = 73651, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 106, 32}},
+		{spells = {73651}, size = 24, alpha = 1, unitId = "player", isMine = 0, filter = "HELPFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 106, 32}},
 
 		-- Revealing Strike / Rupture
-		{spellId = 84617, spellId2 = 1943, size = 24, alpha = 1, unitId = "target", isMine = 1, filter = "HARMFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 202, 32}},
+		{spells = {84617, 1943}, size = 24, alpha = 1, unitId = "target", isMine = 1, filter = "HARMFUL", setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 202, 32}},
 	},
 	["WARLOCK"] = {},
 	["WARRIOR"] = {},

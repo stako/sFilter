@@ -23,13 +23,17 @@ local function sFilter_OnEvent(self, event, ...)
 	if data.unitId == unit or event == "PLAYER_TARGET_CHANGED" or event == "PLAYER_ENTERING_WORLD" then
 		self.found = false
 		self:SetAlpha(data.alpha)
+		local priority = 999
 
 		for i = 1, 40 do
 			local name, icon, count, dispelType, duration, expirationTime, caster, isStealable, nameplateShowPersonal, spellId = UnitAura(data.unitId, i, data.filter)
 
 			if not spellId then break end
 
-			if (data.isMine ~= 1 or MyUnits[caster]) and (spellId == data.spellId or spellId == data.spellId2 or spellId == data.spellId3 or spellId == data.spellId4 or spellId == data.spellId5) then
+			local spellPriority = data.spells[spellId]
+
+			if (data.isMine ~= 1 or MyUnits[caster]) and spellPriority and spellPriority < priority then
+				priority = spellPriority
 				self.found = true
 				self.icon:SetTexture(icon)
 				self.count:SetText(count > 1 and count or "")
@@ -40,8 +44,6 @@ local function sFilter_OnEvent(self, event, ...)
 				else
 					self.cooldown:Hide()
 				end
-
-				break
 			end
 		end
 
@@ -60,9 +62,9 @@ local function sFilter_OnEvent(self, event, ...)
 end
 
 local function sFilter_CreateFrame(data)
-	local frame = CreateFrame("Frame", "sFilter_" .. data.unitId .. "_" .. data.spellId, UIParent)
+	local frame = CreateFrame("Frame", "sFilter_" .. data.unitId .. "_" .. data.spells[1], UIParent)
 	frame.data = data
-	data.spellName, _, data.spellIcon = GetSpellInfo(data.spellId)
+	data.spellName, _, data.spellIcon = GetSpellInfo(data.spells[1])
 	frame:SetWidth(data.size)
 	frame:SetHeight(data.size)
 	frame:SetPoint(unpack(data.setPoint))
@@ -89,7 +91,7 @@ local function sFilter_CreateFrame(data)
 			self:StopMovingOrSizing()
 			if(arg1=="LeftButton") then
 				local point, relativeTo, relativePoint, xOffset, yOffset = self:GetPoint(index)
-				print(format("s|cFFFF8C00F|r|cFFFFFFFFfilter|r: setPoint for %s (%s): {\"%s\", UIParent, \"%s\", %s, %s}", data.spellId, data.spellName, point, relativePoint, floor(xOffset + 0.5), floor(yOffset + 0.5)))
+				print(format("s|cFFFF8C00F|r|cFFFFFFFFfilter|r: setPoint for %s (%s): {\"%s\", UIParent, \"%s\", %s, %s}", data.spells[1], data.spellName, point, relativePoint, floor(xOffset + 0.5), floor(yOffset + 0.5)))
 			end
 		end)
 	end
@@ -112,6 +114,8 @@ local function sFilter_CreateFrame(data)
 	frame.cooldown:SetPoint("TOPLEFT", 1, -1)
 	frame.cooldown:SetPoint("BOTTOMRIGHT", -1, 1)
 	frame.cooldown:SetHideCountdownNumbers(true)
+
+	data.spells = tInvert(data.spells)
 end
 
 local class = select(2, UnitClass("player"))
