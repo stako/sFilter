@@ -128,7 +128,7 @@ eventHandler:SetScript("OnEvent", function(self, event, ...)
   elseif event == "PLAYER_TARGET_CHANGED" and units["target"] then
     scanUnit("target")
   elseif event == "PLAYER_ENTERING_WORLD" then
-    for _, unit in ipairs(units) do
+    for unit in pairs(units) do
       scanUnit(unit)
     end
   end
