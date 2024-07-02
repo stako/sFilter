@@ -62,27 +62,31 @@ local function sFilter_CreateFrame(category, id, data)
 	frame:SetAlpha(data.alpha)
 	frame:SetSize(data.size, data.size)
 	frame:SetPoint(unpack(data.setPoint))
+
 	frame:RegisterEvent("UNIT_AURA")
 	frame:RegisterEvent("PLAYER_TARGET_CHANGED")
 	frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 	frame:SetScript("OnEvent", sFilter_OnEvent)
 
-	frame.icon = frame:CreateTexture("$parentIcon", "BACKGROUND")
-	frame.icon:SetAllPoints(frame)
-	-- frame.icon:SetTexCoord(0.07, 0.93, 0.07, 0.93)
+	local icon = frame:CreateTexture("$parentIcon", "BACKGROUND")
+	icon:SetAllPoints(frame)
+	-- icon:SetTexCoord(0.07, 0.93, 0.07, 0.93)
+	frame.icon = icon
 
-	frame.count = frame:CreateFontString(nil, "OVERLAY")
-	frame.count:SetFontObject(NumberFontNormal)
-	frame.count:SetPoint("BOTTOMRIGHT", -1, 2)
-	frame.count:SetJustifyH("CENTER")
+	local count = frame:CreateFontString(nil, "OVERLAY")
+	count:SetFontObject(NumberFontNormal)
+	count:SetPoint("BOTTOMRIGHT", -1, 2)
+	count:SetJustifyH("CENTER")
+	frame.count = count
 
-	frame.cooldown = CreateFrame("Cooldown", nil, frame, "CooldownFrameTemplate")
-	frame.cooldown:SetReverse(true)
-	frame.cooldown:SetDrawEdge(true)
-	-- frame.cooldown:SetAllPoints(frame.icon)
-	frame.cooldown:SetPoint("TOPLEFT", 1, -1)
-	frame.cooldown:SetPoint("BOTTOMRIGHT", -1, 1)
-	frame.cooldown:SetHideCountdownNumbers(true)
+	local cooldown = CreateFrame("Cooldown", nil, frame, "CooldownFrameTemplate")
+	cooldown:SetReverse(true)
+	cooldown:SetDrawEdge(true)
+	-- cooldown:SetAllPoints(frame.icon)
+	cooldown:SetPoint("TOPLEFT", 1, -1)
+	cooldown:SetPoint("BOTTOMRIGHT", -1, 1)
+	cooldown:SetHideCountdownNumbers(true)
+	frame.cooldown = cooldown
 
 	data.spells = tInvert(data.spells)
 end
