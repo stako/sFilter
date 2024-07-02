@@ -1,0 +1,8 @@
+## Interface: 40400
+## Title: sFilter
+## Notes: Creates icons for important auras
+## Author: stako
+## Version: 1.0
+
+iconData.lua
+sFilter.lua
