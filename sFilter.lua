@@ -7,7 +7,6 @@
 
 local _, ns = ...
 
-local s = ns.settings
 local spells = ns.spells
 
 local MyUnits = {
@@ -54,11 +53,6 @@ local function sFilter_OnEvent(self, event, ...)
 			self.cooldown:Hide()
 		end
 	end
-
-	if s.configmode then
-		self:SetAlpha(data.alpha)
-		self.count:SetText(9)
-	end
 end
 
 local function sFilter_CreateFrame(data)
@@ -72,29 +66,6 @@ local function sFilter_CreateFrame(data)
 	frame:RegisterEvent("PLAYER_TARGET_CHANGED")
 	frame:RegisterEvent("PLAYER_ENTERING_WORLD")
 	frame:SetScript("OnEvent", sFilter_OnEvent)
-
-	if s.configmode then
-		frame:SetMovable(true)
-		frame:EnableMouse(true)
-		frame:RegisterForDrag("LeftButton", "RightButton")
-		frame:SetScript("OnMouseDown", function(self,arg1)
-			if(arg1=="LeftButton") then
-				if(IsShiftKeyDown() or IsAltKeyDown()) then
-					self:StartMoving()
-				end
-			else
-				self:ClearAllPoints()
-				self:SetPoint(unpack(data.setPoint))
-			end
-		end)
-		frame:SetScript("OnMouseUp", function(self,arg1)
-			self:StopMovingOrSizing()
-			if(arg1=="LeftButton") then
-				local point, relativeTo, relativePoint, xOffset, yOffset = self:GetPoint(index)
-				print(format("s|cFFFF8C00F|r|cFFFFFFFFfilter|r: setPoint for %s (%s): {\"%s\", UIParent, \"%s\", %s, %s}", data.spells[1], data.spellName, point, relativePoint, floor(xOffset + 0.5), floor(yOffset + 0.5)))
-			end
-		end)
-	end
 
 	frame.icon = frame:CreateTexture("$parentIcon", "BACKGROUND")
 	frame.icon:SetAllPoints(frame)

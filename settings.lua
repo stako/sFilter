@@ -1,21 +1,9 @@
 local _, ns = ...
 
--- "true" means enabled, "false" means disabled
-ns.settings = {
-	-- configmode = true -- In this mode all icons are shown and can be moved.
-}
-
---[[ More info about config mode:
-You can move icons with left mouse button while holding Alt OR Shift. Changed position won't be saved between sessions.
-After click on icon you will see in chat info about its position. This can be used to change setPoint attribute is spell list.
-Clicking on icon with right mouse button will reset its position to default.
-]]
-
 --[[ Closer look at spell lists:
-All classes have their own spell list.
-Each entry in list creates a separate icon. Entry is a table with values in it:
-- spellId - id of spell you want to track. If you don't know it - check wowhead.com - last number in any spell link is spellid (example: http://www.wowhead.com/?spell=55095, id is 55095)
-- spellId2, spellId3, spellId4, spellId5 - optional entries, these are the spellids you want to track if primary spell is NOT active.
+All classes have their own spell list. There is also a "GENERAL" list shared amongst all classes.
+Each entry creates a separate icon. Entry is a table with values in it:
+- spells - ID's of each spell to be tracked by this icon. If you don't know it - check wowhead.com - last number in any spell link is spellid (example: http://www.wowhead.com/?spell=55095, id is 55095)
 - size - icon size in pixels
 - alpha - between 0 and 1
 - unitId - unit at which you wish to track selected spell(s). More info: http://www.wowwiki.com/UnitId
