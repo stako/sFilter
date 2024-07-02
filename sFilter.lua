@@ -28,7 +28,7 @@ local function sFilter_OnEvent(self, event, ...)
 
 			local spellPriority = iconData.spells[spellId]
 
-			if (iconData.isMine ~= 1 or myUnits[caster]) and spellPriority and spellPriority < priority then
+			if (not iconData.isMine or myUnits[caster]) and spellPriority and spellPriority < priority then
 				spellData = {
 					icon = icon,
 					count = count,
