@@ -17,40 +17,43 @@ local MyUnits = {
 
 local function sFilter_OnEvent(self, event, ...)
 	local unit = ...
-	local data = self.data
+	local iconData = self.data
+	local spellData
 
-	if data.unitId == unit or event == "PLAYER_TARGET_CHANGED" or event == "PLAYER_ENTERING_WORLD" then
-		self.found = false
-		self:SetAlpha(data.alpha)
+	if iconData.unitId == unit or event == "PLAYER_TARGET_CHANGED" or event == "PLAYER_ENTERING_WORLD" then
 		local priority = 999
 
 		for i = 1, 40 do
-			local name, icon, count, dispelType, duration, expirationTime, caster, isStealable, nameplateShowPersonal, spellId = UnitAura(data.unitId, i, data.filter)
+			local _, icon, count, _, duration, expirationTime, caster, _, _, spellId = UnitAura(iconData.unitId, i, iconData.filter)
 
 			if not spellId then break end
 
-			local spellPriority = data.spells[spellId]
+			local spellPriority = iconData.spells[spellId]
 
-			if (data.isMine ~= 1 or MyUnits[caster]) and spellPriority and spellPriority < priority then
-				priority = spellPriority
-				self.found = true
-				self.icon:SetTexture(icon)
-				self.count:SetText(count > 1 and count or "")
-
-				if duration and duration > 0 then
-					self.cooldown:Show()
-					self.cooldown:SetCooldown(expirationTime - duration, duration)
-				else
-					self.cooldown:Hide()
-				end
+			if (iconData.isMine ~= 1 or MyUnits[caster]) and spellPriority and spellPriority < priority then
+				spellData = {
+					icon = icon,
+					count = count,
+					duration = duration,
+					expirationTime = expirationTime,
+					caster = caster,
+					spellId = spellId
+				}
 			end
 		end
 
-		if not self.found then
-			self:SetAlpha(0)
-			self.icon:SetTexture(data.spellIcon)
-			self.count:SetText("")
-			self.cooldown:Hide()
+		if spellData then
+			self:Show()
+			self.icon:SetTexture(spellData.icon)
+			self.count:SetText(spellData.count > 1 and spellData.count or "")
+			if spellData.duration and spellData.duration > 0 then
+				self.cooldown:Show()
+				self.cooldown:SetCooldown(spellData.expirationTime - spellData.duration, spellData.duration)
+			else
+				self.cooldown:Hide()
+			end
+		else
+			self:Hide()
 		end
 	end
 end
@@ -59,6 +62,7 @@ local function sFilter_CreateFrame(data)
 	local frame = CreateFrame("Frame", "sFilter_" .. data.unitId .. "_" .. data.spells[1], UIParent)
 	frame.data = data
 	data.spellName, _, data.spellIcon = GetSpellInfo(data.spells[1])
+	frame:SetAlpha(data.alpha)
 	frame:SetWidth(data.size)
 	frame:SetHeight(data.size)
 	frame:SetPoint(unpack(data.setPoint))
