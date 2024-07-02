@@ -72,9 +72,8 @@ local function sFilter_CreateFrame(category, id, data)
 	-- frame.icon:SetTexCoord(0.07, 0.93, 0.07, 0.93)
 
 	frame.count = frame:CreateFontString(nil, "OVERLAY")
-	frame.count:SetFont("Fonts\\FRIZQT__.TTF", 14, "OUTLINE")
-	frame.count:SetTextColor(0.8, 0.8, 0.8)
-	frame.count:SetPoint("BOTTOMRIGHT", -1, 1)
+	frame.count:SetFontObject(NumberFontNormal)
+	frame.count:SetPoint("BOTTOMRIGHT", -1, 2)
 	frame.count:SetJustifyH("CENTER")
 
 	frame.cooldown = CreateFrame("Cooldown", nil, frame, "CooldownFrameTemplate")
