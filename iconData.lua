@@ -4,8 +4,8 @@ ns.alternateStyle = true
 
 ns.iconData = {
   ["GENERAL"] = {
-    -- Rocket Fuel Leak
-    {spells = {94794}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 100, 0}},
+    -- Rocket Fuel Leak, Combustion
+    {spells = {94794, 83853}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 100, 0}},
 
     -- Divine Shield, Deterrence, Hand of Protection, Hand of Sacrifice, Roar of Sacrifice
     {spells = {642, 19263, 1022, 6940, 53480}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 42}},
