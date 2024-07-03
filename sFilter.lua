@@ -40,7 +40,7 @@ local Icon = {
 
     local count = frame:CreateFontString(nil, "OVERLAY", "NumberFontNormal")
     count:SetPoint("BOTTOMRIGHT", -1, 2)
-	  count:SetJustifyH("CENTER")
+    count:SetJustifyH("CENTER")
 
     local cooldown = CreateFrame("Cooldown", nil, frame, "CooldownFrameTemplate")
     cooldown:SetAllPoints()
