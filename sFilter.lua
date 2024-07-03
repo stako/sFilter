@@ -38,6 +38,16 @@ local Icon = {
     local texture = frame:CreateTexture(nil, "ARTWORK")
     texture:SetAllPoints()
 
+    local count = frame:CreateFontString(nil, "OVERLAY", "NumberFontNormal")
+    count:SetPoint("BOTTOMRIGHT", -1, 2)
+	  count:SetJustifyH("CENTER")
+
+    local cooldown = CreateFrame("Cooldown", nil, frame, "CooldownFrameTemplate")
+    cooldown:SetAllPoints()
+    cooldown:SetReverse(true)
+    cooldown:SetDrawEdge(true)
+    cooldown:SetHideCountdownNumbers(true)
+
     if ns.alternateStyle then
       local background = frame:CreateTexture(nil, "BACKGROUND")
       background:SetAllPoints()
@@ -47,18 +57,11 @@ local Icon = {
       texture:SetPoint("TOPLEFT", pixel, -pixel)
       texture:SetPoint("BOTTOMRIGHT", -pixel, pixel)
       texture:SetTexCoord(0.07, 0.93, 0.07, 0.93)
+
+      cooldown:ClearAllPoints()
+      cooldown:SetPoint("TOPLEFT", pixel, -pixel)
+      cooldown:SetPoint("BOTTOMRIGHT", -pixel, pixel)
     end
-
-    local count = frame:CreateFontString(nil, "OVERLAY", "NumberFontNormal")
-    count:SetPoint("BOTTOMRIGHT", -1, 2)
-	  count:SetJustifyH("CENTER")
-
-    local cooldown = CreateFrame("Cooldown", nil, frame, "CooldownFrameTemplate")
-    cooldown:SetPoint("TOPLEFT", 1, -1)
-    cooldown:SetPoint("BOTTOMRIGHT", -1, 1)
-    cooldown:SetReverse(true)
-    cooldown:SetDrawEdge(true)
-    cooldown:SetHideCountdownNumbers(true)
 
     self.frame = frame
     self.texture = texture
