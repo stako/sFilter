@@ -1,5 +1,7 @@
 local _, ns = ...
 
+ns.alternateStyle = true
+
 ns.iconData = {
   ["GENERAL"] = {
     -- Rocket Fuel Leak

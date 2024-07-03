@@ -11,6 +11,8 @@ local myUnits = {
   pet = true,
 }
 
+local pixel = GetScreenWidth() / GetPhysicalScreenSize()
+
 -- Icon class
 local Icon = {
   new = function(self, obj, category, id)
@@ -34,6 +36,17 @@ local Icon = {
 
     local texture = frame:CreateTexture(nil, "ARTWORK")
     texture:SetAllPoints()
+
+    if ns.alternateStyle then
+      local background = frame:CreateTexture(nil, "BACKGROUND")
+      background:SetAllPoints()
+      background:SetColorTexture(0, 0, 0)
+
+      texture:ClearAllPoints()
+      texture:SetPoint("TOPLEFT", pixel, -pixel)
+      texture:SetPoint("BOTTOMRIGHT", -pixel, pixel)
+      texture:SetTexCoord(0.07, 0.93, 0.07, 0.93)
+    end
 
     local count = frame:CreateFontString(nil, "OVERLAY", "NumberFontNormal")
     count:SetPoint("BOTTOMRIGHT", -1, 2)
