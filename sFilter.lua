@@ -33,6 +33,7 @@ local Icon = {
     local frame = CreateFrame("Frame", "sFilter_" .. category .. id, UIParent)
     frame:SetSize(self.size, self.size)
     frame:SetPoint(unpack(self.setPoint))
+    frame:SetAlpha(self.alpha)
 
     local texture = frame:CreateTexture(nil, "ARTWORK")
     texture:SetAllPoints()
