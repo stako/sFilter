@@ -115,7 +115,9 @@ local function scanAuras(unit, auraType)
     if not spellId then break end
     if spells[spellId] then
       for _, icon in ipairs(spells[spellId]) do
-        icon:HandleSpell(texture, count, duration, expirationTime, caster, spellId)
+        if icon.unit == unit then
+          icon:HandleSpell(texture, count, duration, expirationTime, caster, spellId)
+        end
       end
     end
   end
