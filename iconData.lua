@@ -4,11 +4,11 @@ ns.alternateStyle = true
 
 ns.iconData = {
   ["GENERAL"] = {
-    -- Rocket Fuel Leak, Combustion
-    {spells = {94794, 83853}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 100, 0}},
+    -- Rocket Fuel Leak, Summon Gargoyle, Combustion
+    {spells = {94794, 49206, 83853}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 100, 0}},
 
-    -- Divine Shield, Deterrence, Hand of Protection, Hand of Sacrifice, Roar of Sacrifice
-    {spells = {642, 19263, 1022, 6940, 53480}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 42}},
+    -- Divine Shield, Deterrence, Hand of Protection, Hand of Sacrifice, Pain Suppresion, Roar of Sacrifice
+    {spells = {642, 19263, 1022, 6940, 33206, 53480}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 42}},
   },
   ["SHAMAN"] = {
     -- Water Shield, Earth Shield
@@ -52,7 +52,7 @@ ns.iconData = {
   ["PRIEST"] = {},
   ["ROGUE"] = {
     -- Stealth / Dance / Vanish / Envenom / Deep Insight
-    {spells = {1784, 51713, 11327, 32645, 84747}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
+    {spells = {1784, 51713, 11327, 84747}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
 
     -- Blade Flurry / Overkill
     {spells = {13877, 58427}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 158, 32}},
