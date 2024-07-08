@@ -11,7 +11,7 @@ local myUnits = {
   pet = true,
 }
 
-local pixel = GetScreenWidth() / GetPhysicalScreenSize()
+local pixel = PixelUtil.GetNearestPixelSize(1, UIParent:GetScale())
 
 -- Icon class
 local Icon = {
