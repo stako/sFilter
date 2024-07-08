@@ -32,6 +32,9 @@ ns.iconData = {
     -- Aspect of the Pack, Aspect of the Cheetah, Camouflage
     {spells = {5118, 13159, 51755}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
 
+    -- Trap Launcher
+    {spells = {77769}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -142, 0}},
+
     -- Fire!
     {spells = {82926}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, -42}},
 
