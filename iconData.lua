@@ -52,11 +52,8 @@ ns.iconData = {
   },
   ["MAGE"] = {},
   ["PALADIN"] = {
-    -- Infusion of Light
-    {spells = {54149}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
-
-    -- Daybreak
-    {spells = {88819}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, -42}},
+    -- Infusion of Light / Daybreak
+    {spells = {54149, 88819}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
 
     -- Judgements of the Pure
     {spells = {53657}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 84, 22}},
