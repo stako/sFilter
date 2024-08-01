@@ -1,6 +1,6 @@
 local _, ns = ...
 
-ns.alternateStyle = true
+ns.alternateStyle = false
 
 ns.iconData = {
   ["GENERAL"] = {
@@ -52,8 +52,14 @@ ns.iconData = {
   },
   ["MAGE"] = {},
   ["PALADIN"] = {
-    -- Infusion of Light / Daybreak
-    {spells = {54149, 88819}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
+    -- Infusion of Light / Daybreak / Crusader Aura
+    {spells = {54149, 88819, 32223}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
+
+    -- Avenging Wrath / Divine Favor / Guardian of Ancient Kings
+    {spells = {31884, 31842, 86669}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, -42}},
+
+    -- Aura Mastery
+    {spells = {31821}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -142, 0}},
 
     -- Judgements of the Pure
     {spells = {53657}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 84, 22}},
@@ -61,6 +67,18 @@ ns.iconData = {
   ["PRIEST"] = {
     -- Shadow Orb
     {spells = {77487}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
+
+    -- Empowered Shadow
+    {spells = {95799}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -74, 16}},
+
+    -- Shadow Word: Pain
+    {spells = {589}, size = 24, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", TargetFrame, "TOPLEFT", 5, -18}},
+
+    -- Vampiric Touch
+    {spells = {34914}, size = 24, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", TargetFrame, "TOPLEFT", 31, -18}},
+
+    -- Devouring Plague
+    {spells = {2944}, size = 24, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", TargetFrame, "TOPLEFT", 57, -18}},
   },
   ["ROGUE"] = {
     -- Stealth / Dance / Vanish / Envenom / Deep Insight
