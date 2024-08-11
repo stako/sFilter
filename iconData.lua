@@ -7,8 +7,8 @@ ns.iconData = {
     -- Rocket Fuel Leak / Summon Gargoyle / Combustion
     {spells = {94794, 49206, 83853}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 100, 0}},
 
-    -- Divine Shield / Deterrence / Hand of Protection / Hand of Sacrifice / Pain Suppresion / Roar of Sacrifice
-    {spells = {642, 19263, 1022, 6940, 33206, 53480}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 42}},
+    -- Divine Shield / Deterrence / Hand of Protection / Hand of Sacrifice / Pain Suppresion / Roar of Sacrifice / Dispersion
+    {spells = {642, 19263, 1022, 6940, 33206, 53480, 47585}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 42}},
   },
   ["SHAMAN"] = {
     -- Water Shield / Earth Shield
@@ -66,19 +66,22 @@ ns.iconData = {
   },
   ["PRIEST"] = {
     -- Shadow Orb
-    {spells = {77487}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
+    {spells = {77487}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 101, 32}},
 
-    -- Empowered Shadow
-    {spells = {95799}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -74, 16}},
+    -- Dark Evangelism
+    {spells = {87118}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 127, 32}},
 
     -- Shadow Word: Pain
-    {spells = {589}, size = 24, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", TargetFrame, "TOPLEFT", 5, -18}},
+    {spells = {589}, size = 24, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 153, 32}},
 
     -- Vampiric Touch
-    {spells = {34914}, size = 24, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", TargetFrame, "TOPLEFT", 31, -18}},
+    {spells = {34914}, size = 24, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 179, 32}},
 
     -- Devouring Plague
-    {spells = {2944}, size = 24, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", TargetFrame, "TOPLEFT", 57, -18}},
+    {spells = {2944}, size = 24, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 205, 32}},
+
+    -- Empowered Shadow
+    {spells = {95799}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
   },
   ["ROGUE"] = {
     -- Stealth / Dance / Vanish / Envenom / Deep Insight
@@ -96,6 +99,15 @@ ns.iconData = {
     -- Revealing Strike / Rupture
     {spells = {84617, 1943}, size = 24, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 202, 32}},
   },
-  ["WARLOCK"] = {},
+  ["WARLOCK"] = {
+    -- Corruption
+    {spells = {172}, size = 24, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 153, 8}},
+
+    -- Unstable Affliction
+    {spells = {30108}, size = 24, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 179, 8}},
+
+    -- Bane of Agony / Bane of Doom
+    {spells = {980, 603}, size = 24, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 205, 8}},
+  },
   ["WARRIOR"] = {},
 }
