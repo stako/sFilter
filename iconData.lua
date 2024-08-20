@@ -65,8 +65,8 @@ ns.iconData = {
     {spells = {53657}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 84, 22}},
   },
   ["PRIEST"] = {
-    -- Shadow Orb
-    {spells = {77487}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 101, 32}},
+    -- Empowered Shadow
+    {spells = {95799}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 101, 32}},
 
     -- Dark Evangelism
     {spells = {87118}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 127, 32}},
@@ -80,8 +80,8 @@ ns.iconData = {
     -- Devouring Plague
     {spells = {2944}, size = 24, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 205, 32}},
 
-    -- Empowered Shadow
-    {spells = {95799}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
+    -- Shadow Orb
+    {spells = {77487}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
   },
   ["ROGUE"] = {
     -- Stealth / Dance / Vanish / Envenom / Deep Insight
