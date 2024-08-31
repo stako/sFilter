@@ -1,11 +1,11 @@
 local _, ns = ...
 
-ns.alternateStyle = false
+ns.alternateStyle = true
 
 ns.iconData = {
   ["GENERAL"] = {
-    -- Rocket Fuel Leak / Summon Gargoyle / Combustion / Dark Simulacrum
-    {spells = {94794, 49206, 83853, 77606}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 100, 0}},
+    -- Rocket Fuel Leak / Summon Gargoyle / Combustion / Dark Simulacrum / Corruption: Sickness
+    {spells = {94794, 49206, 83853, 77606, 82235}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 100, 0}},
 
     -- Divine Shield / Deterrence / Hand of Protection / Hand of Sacrifice / Pain Suppresion / Roar of Sacrifice / Dispersion
     {spells = {642, 19263, 1022, 6940, 33206, 53480, 47585}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 42}},
