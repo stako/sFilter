@@ -82,22 +82,31 @@ ns.iconData = {
 
     -- Shadow Orb
     {spells = {77487}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
+
+    -- Surge of Dominance
+    {spells = {92218, 85027}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -96, -26}},
+
+    -- Power Torrent
+    {spells = {74241}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -121, -26}},
   },
   ["ROGUE"] = {
     -- Stealth / Dance / Vanish / Envenom / Deep Insight
     {spells = {1784, 51713, 11327, 84747}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
 
+    -- Slice and Dice
+    {spells = {5171}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 106, 32}},
+
+    -- Recuperate
+    {spells = {73651}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 132, 32}},
+
     -- Blade Flurry / Overkill / Feint
     {spells = {13877, 58427, 1966}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 158, 32}},
 
-    -- Slice and Dice
-    {spells = {5171}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 132, 32}},
-
-    -- Recuperate
-    {spells = {73651}, size = 24, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 106, 32}},
-
     -- Revealing Strike / Rupture
     {spells = {84617, 1943}, size = 24, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 202, 32}},
+
+    -- Hemorrhage
+    {spells = {89775}, size = 24, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 202, 7}},
   },
   ["WARLOCK"] = {
     -- Corruption
