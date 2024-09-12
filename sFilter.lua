@@ -31,7 +31,7 @@ local Icon = {
 
   Build = function(self, category, id)
     local frame = CreateFrame("Frame", "sFilter_" .. category .. id, UIParent)
-    frame:SetSize(self.size, self.size)
+    frame:SetSize(self.size, self.short and (self.size * 0.666) or self.size)
     frame:SetPoint(unpack(self.setPoint))
     frame:SetAlpha(self.alpha)
 
@@ -61,6 +61,14 @@ local Icon = {
       cooldown:ClearAllPoints()
       cooldown:SetPoint("TOPLEFT", pixel, -pixel)
       cooldown:SetPoint("BOTTOMRIGHT", -pixel, pixel)
+    end
+
+    if self.short then
+      if ns.alternateStyle then
+        texture:SetTexCoord(0.07, 0.93, 0.2366, 0.7634)
+      else
+        texture:SetTexCoord(0, 1, 0.1666, 0.8334)
+      end
     end
 
     self.frame = frame
