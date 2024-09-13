@@ -64,11 +64,7 @@ local Icon = {
     end
 
     if self.short then
-      if ns.alternateStyle then
-        texture:SetTexCoord(0.07, 0.93, 0.2366, 0.7634)
-      else
-        texture:SetTexCoord(0, 1, 0.1666, 0.8334)
-      end
+      texture:SetTexCoord(0.07, 0.93, 0.2366, 0.7634)
     end
 
     self.frame = frame
