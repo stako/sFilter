@@ -95,12 +95,10 @@ local Icon = {
 -- Build Icons
 if not ns.iconData then return end
 
-for category, categoryData in pairs(ns.iconData) do
-  if category == "GENERAL" or category == class then
-    for i, data in ipairs(categoryData) do
-      local icon = Icon:new(data, category, i)
-      tinsert(icons, icon)
-    end
+for _, category in ipairs({"GENERAL", class}) do
+  for i, data in ipairs(ns.iconData[category]) do
+    local icon = Icon:new(data, category, i)
+    tinsert(icons, icon)
   end
 end
 
