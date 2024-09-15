@@ -93,23 +93,23 @@ ns.iconData = {
     -- Stealth / Dance / Vanish / Envenom / Deep Insight
     {spells = {1784, 51713, 11327, 84747}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
 
-    -- Slice and Dice
-    {spells = {5171}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 106, 32}},
-
     -- Recuperate
-    {spells = {73651}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 130, 32}},
+    {spells = {73651}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 106, 32}},
+
+    -- Slice and Dice
+    {spells = {5171}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 130, 32}},
 
     -- Blade Flurry / Overkill / Feint
     {spells = {13877, 58427, 1966}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 154, 32}},
 
-    -- Find Weakness
-    {spells = {91021}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 178, 32}},
-
     -- Revealing Strike / Rupture
-    {spells = {84617, 1943}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 202, 32}},
+    {spells = {1943}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 178, 32}},
 
-    -- Hemorrhage
-    {spells = {89775}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 202, 8}},
+    -- Hemorrhage / Revealing Strike
+    {spells = {89775, 84617}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 202, 32}},
+
+    -- Find Weakness
+    {spells = {91021}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 202, 8}},
   },
   ["WARLOCK"] = {
     -- Corruption
