@@ -112,7 +112,7 @@ for _, category in ipairs({"GENERAL", class}) do
 end
 
 for _, icon in ipairs(icons) do
-  units[icon.unit] = true
+  units[icon.unit] = icon.unit
 
   for spellId, _ in pairs(icon.spells) do
     spells[spellId] = spells[spellId] or {}
@@ -146,7 +146,7 @@ local function scanUnit(unit)
 end
 
 local eventHandler = CreateFrame("Frame")
-eventHandler:RegisterEvent("UNIT_AURA")
+eventHandler:RegisterUnitEvent("UNIT_AURA", unpack(units))
 eventHandler:RegisterEvent("PLAYER_TARGET_CHANGED")
 eventHandler:RegisterEvent("PLAYER_ENTERING_WORLD")
 
