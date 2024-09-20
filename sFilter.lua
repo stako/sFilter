@@ -31,7 +31,7 @@ local Icon = {
 
   Build = function(self, category, id)
     local frame = CreateFrame("Frame", "sFilter_" .. category .. id, UIParent)
-    frame:SetSize(self.size, self.short and (self.size * 0.666) or self.size)
+    frame:SetSize(self.size, self.size)
     frame:SetPoint(unpack(self.setPoint))
     frame:SetAlpha(self.alpha)
 
@@ -48,7 +48,16 @@ local Icon = {
     cooldown:SetDrawEdge(true)
     cooldown:SetHideCountdownNumbers(true)
 
-    if ns.alternateStyle then
+    if ns.borderStyle == 2 then
+      local borderFrame = CreateFrame("Frame", nil, frame)
+      borderFrame:SetFrameLevel(5)
+      borderFrame:SetAllPoints()
+
+      local border = borderFrame:CreateTexture(nil, "ARTWORK")
+      border:SetAtlas("CommentatorSpellBorder")
+      border:SetPoint("CENTER")
+      border:SetSize(self.size * 1.45, self.size * 1.45)
+    elseif ns.borderStyle == 3 then
       local background = frame:CreateTexture(nil, "BACKGROUND")
       background:SetAllPoints()
       background:SetColorTexture(0, 0, 0)
@@ -61,10 +70,6 @@ local Icon = {
       cooldown:ClearAllPoints()
       cooldown:SetPoint("TOPLEFT", pixel, -pixel)
       cooldown:SetPoint("BOTTOMRIGHT", -pixel, pixel)
-    end
-
-    if self.short then
-      texture:SetTexCoord(0.07, 0.93, 0.2366, 0.7634)
     end
 
     self.frame = frame
