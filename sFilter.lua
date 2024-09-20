@@ -57,6 +57,10 @@ local Icon = {
       border:SetAtlas("CommentatorSpellBorder")
       border:SetPoint("CENTER")
       border:SetSize(self.size * 1.45, self.size * 1.45)
+
+      cooldown:ClearAllPoints()
+      cooldown:SetPoint("TOPLEFT", pixel, -pixel)
+      cooldown:SetPoint("BOTTOMRIGHT", -pixel, pixel)
     elseif ns.borderStyle == 3 then
       local background = frame:CreateTexture(nil, "BACKGROUND")
       background:SetAllPoints()
