@@ -84,10 +84,10 @@ ns.iconData = {
     {spells = {77487}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
 
     -- Surge of Dominance
-    {spells = {92218, 85027}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -96, -16}},
+    {spells = {92218, 85027}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -96, -25}},
 
     -- Power Torrent
-    {spells = {74241}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -121, -16}},
+    {spells = {74241}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -121, -25}},
   },
   ["ROGUE"] = {
     -- Stealth / Dance / Vanish / Envenom / Deep Insight
