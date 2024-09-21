@@ -58,6 +58,8 @@ local Icon = {
       border:SetPoint("CENTER")
       border:SetSize(self.size * 1.45, self.size * 1.45)
 
+      texture:SetTexCoord(0.07, 0.93, 0.07, 0.93)
+
       cooldown:ClearAllPoints()
       cooldown:SetPoint("TOPLEFT", pixel, -pixel)
       cooldown:SetPoint("BOTTOMRIGHT", -pixel, pixel)
