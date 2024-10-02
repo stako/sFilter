@@ -15,7 +15,7 @@ ns.iconData = {
     {spells = {52127, 974}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
 
     -- Tidal Waves
-    {spells = {53390}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 106, 32}},
+    {spells = {53390}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 102, -18}},
 
     -- Spiritwalker's Grace
     {spells = {79206}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, -42}},
@@ -39,16 +39,16 @@ ns.iconData = {
     {spells = {136}, size = 23, alpha = 1, unit = "pet", isMine = false, setPoint = {"LEFT", PetFrame, "RIGHT", -8, -4}},
 
     -- Aspect of the Hawk / Aspect of the Fox / Aspect of the Wild
-    {spells = {13165, 82661, 20043}, size = 23, alpha = 1, unit = "player", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 106, 32}},
+    {spells = {13165, 82661, 20043}, size = 23, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 102, -18}},
 
     -- Sniper Training / Improved Steady Shot / Focus Fire
-    {spells = {64420, 53220, 82692}, size = 23, alpha = 1, unit = "player", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 130, 32}},
+    {spells = {64420, 53220, 82692}, size = 23, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 127, -18}},
 
     -- Serpent Sting
-    {spells = {1978, 88453}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 178, 32}},
+    {spells = {1978, 88453}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 177, -18}},
 
     -- Hunter's Mark
-    {spells = {1130, 88691}, size = 23, alpha = 1, unit = "target", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 202, 32}},
+    {spells = {1130, 88691}, size = 23, alpha = 1, unit = "target", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, -18}},
   },
   ["MAGE"] = {},
   ["PALADIN"] = {
@@ -62,23 +62,23 @@ ns.iconData = {
     {spells = {31821}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -142, 0}},
 
     -- Judgements of the Pure
-    {spells = {53657}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 84, 22}},
+    {spells = {53657}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 84, 22}},
   },
   ["PRIEST"] = {
     -- Empowered Shadow
-    {spells = {95799}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 106, 32}},
+    {spells = {95799}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 102, -18}},
 
     -- Dark Evangelism
-    {spells = {87118}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 130, 32}},
+    {spells = {87118}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 127, -18}},
 
     -- Shadow Word: Pain
-    {spells = {589}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 154, 32}},
+    {spells = {589}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 152, -18}},
 
     -- Vampiric Touch
-    {spells = {34914}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 178, 32}},
+    {spells = {34914}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 177, -18}},
 
     -- Devouring Plague
-    {spells = {2944}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 202, 32}},
+    {spells = {2944}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, -18}},
 
     -- Shadow Orb
     {spells = {77487}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
@@ -94,32 +94,32 @@ ns.iconData = {
     {spells = {1784, 51713, 11327, 84747}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -100, 0}},
 
     -- Recuperate
-    {spells = {73651}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 106, 32}},
+    {spells = {73651}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 102, -18}},
 
     -- Slice and Dice
-    {spells = {5171}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 130, 32}},
+    {spells = {5171}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 127, -18}},
 
     -- Blade Flurry / Overkill / Feint
-    {spells = {13877, 58427, 1966}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 154, 32}},
+    {spells = {13877, 58427, 1966}, size = 23, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 152, -18}},
 
     -- Revealing Strike / Rupture
-    {spells = {1943}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 178, 32}},
+    {spells = {1943}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 177, -18}},
 
     -- Hemorrhage / Revealing Strike
-    {spells = {89775, 84617}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 202, 32}},
+    {spells = {89775, 84617}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, -18}},
 
     -- Find Weakness
-    {spells = {91021}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 202, 8}},
+    {spells = {91021}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, 7}},
   },
   ["WARLOCK"] = {
     -- Corruption
-    {spells = {172}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 154, 8}},
+    {spells = {172}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 152, -18}},
 
     -- Unstable Affliction
-    {spells = {30108}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 178, 8}},
+    {spells = {30108}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 177, -18}},
 
     -- Bane of Agony / Bane of Doom
-    {spells = {980, 603}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"TOPLEFT", PlayerFrame, "BOTTOMLEFT", 202, 8}},
+    {spells = {980, 603}, size = 23, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, -18}},
   },
   ["WARRIOR"] = {},
 }
