@@ -56,7 +56,7 @@ local Icon = {
       local border = borderFrame:CreateTexture(nil, "ARTWORK")
       border:SetAtlas("CommentatorSpellBorder")
       border:SetPoint("CENTER")
-      border:SetSize(self.size * 1.45, self.size * 1.45)
+      border:SetSize(self.size * 1.6, self.size * 1.6)
 
       texture:SetTexCoord(0.07, 0.93, 0.07, 0.93)
 
