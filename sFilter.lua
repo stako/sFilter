@@ -40,7 +40,7 @@ local Icon = {
 
     local count = frame:CreateFontString(nil, "OVERLAY", "NumberFontNormal")
     count:SetPoint("BOTTOMRIGHT", -1, 2)
-    count:SetJustifyH("CENTER")
+    count:SetJustifyH("RIGHT")
 
     local cooldown = CreateFrame("Cooldown", nil, frame, "CooldownFrameTemplate")
     cooldown:SetAllPoints()
@@ -59,6 +59,7 @@ local Icon = {
       border:SetSize(self.size * 1.6, self.size * 1.6)
 
       texture:SetTexCoord(0.07, 0.93, 0.07, 0.93)
+      count:SetPoint("BOTTOMRIGHT", 0, 1)
 
       cooldown:ClearAllPoints()
       cooldown:SetPoint("TOPLEFT", pixel, -pixel)
