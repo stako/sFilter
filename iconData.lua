@@ -4,8 +4,8 @@ ns.borderStyle = 2
 
 ns.iconData = {
   ["GENERAL"] = {
-    -- Rocket Fuel Leak / Summon Gargoyle / Combustion / Dark Simulacrum / Corruption: Sickness
-    {spells = {94794, 49206, 83853, 77606, 82235}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 123, 0}},
+    -- Rocket Fuel Leak / Summon Gargoyle / Combustion / Dark Simulacrum / Corruption: Sickness / Twilight Meteorite
+    {spells = {94794, 49206, 83853, 77606, 82235, 88518}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 123, 0}},
 
     -- Divine Shield / Deterrence / Hand of Protection / Hand of Sacrifice / Pain Suppresion / Roar of Sacrifice / Dispersion
     {spells = {642, 19263, 1022, 6940, 33206, 53480, 47585}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 47}},
@@ -84,10 +84,10 @@ ns.iconData = {
     {spells = {77487}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
 
     -- Surge of Dominance
-    {spells = {92218, 85027}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -96, -25}},
+    {spells = {92218, 85027}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -145, -28}},
 
     -- Power Torrent
-    {spells = {74241}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -121, -25}},
+    {spells = {74241}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -119, -28}},
   },
   ["ROGUE"] = {
     -- Stealth / Dance / Vanish / Envenom / Deep Insight
