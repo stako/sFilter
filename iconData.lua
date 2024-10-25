@@ -5,6 +5,7 @@ ns.borderStyle = 2
 ns.iconData = {
   ["GENERAL"] = {
     {
+      size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 123, 0},
       spells = {
         94794, -- Rocket Fuel Leak
         49206, -- Summon Gargoyle
@@ -14,13 +15,22 @@ ns.iconData = {
         88518, -- Twilight Meteorite (Theralion & Valiona)
         80627, -- Stolen Power (Nefarian)
         89421, -- Wrack (Sinestra)
-        89435 -- Wrack (Sinestra)
-      },
-      size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 123, 0}
+        89435  -- Wrack (Sinestra)
+      }
     },
 
-    -- Divine Shield / Deterrence / Hand of Protection / Hand of Sacrifice / Pain Suppresion / Roar of Sacrifice / Dispersion
-    {spells = {642, 19263, 1022, 6940, 33206, 53480, 47585}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 47}},
+    {
+      size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 47},
+      spells = {
+        642,    -- Divine Shield
+        19263,  -- Deterrence
+        47585,  -- Dispersion
+        1022,   -- Hand of Protection
+        6940,   -- Hand of Sacrifice
+        33206,  -- Pain Suppresion
+        53480   -- Roar of Sacrifice
+      }
+    }
   },
   ["SHAMAN"] = {
     -- Water Shield / Earth Shield
