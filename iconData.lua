@@ -4,8 +4,20 @@ ns.borderStyle = 2
 
 ns.iconData = {
   ["GENERAL"] = {
-    -- Rocket Fuel Leak / Summon Gargoyle / Combustion / Dark Simulacrum / Corruption: Sickness / Twilight Meteorite
-    {spells = {94794, 49206, 83853, 77606, 82235, 88518}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 123, 0}},
+    {
+      spells = {
+        94794, -- Rocket Fuel Leak
+        49206, -- Summon Gargoyle
+        83853, -- Combustion
+        77606, -- Dark Simulacrum
+        82235, -- Corruption: Sickness (Cho'gall)
+        88518, -- Twilight Meteorite (Theralion & Valiona)
+        80627, -- Stolen Power (Nefarian)
+        89421, -- Wrack (Sinestra)
+        89435 -- Wrack (Sinestra)
+      },
+      size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 123, 0}
+    },
 
     -- Divine Shield / Deterrence / Hand of Protection / Hand of Sacrifice / Pain Suppresion / Roar of Sacrifice / Dispersion
     {spells = {642, 19263, 1022, 6940, 33206, 53480, 47585}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 47}},
