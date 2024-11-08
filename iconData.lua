@@ -7,15 +7,19 @@ ns.iconData = {
     {
       size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 123, 0},
       spells = {
-        94794, -- Rocket Fuel Leak
-        49206, -- Summon Gargoyle
-        83853, -- Combustion
-        77606, -- Dark Simulacrum
-        82235, -- Corruption: Sickness (Cho'gall)
-        88518, -- Twilight Meteorite (Theralion & Valiona)
-        80627, -- Stolen Power (Nefarian)
-        89421, -- Wrack (Sinestra)
-        89435  -- Wrack (Sinestra)
+        94794,  -- Rocket Fuel Leak
+        49206,  -- Summon Gargoyle
+        83853,  -- Combustion
+        77606,  -- Dark Simulacrum
+        82235,  -- Corruption: Sickness (Cho'gall)
+        88518,  -- Twilight Meteorite (Theralion & Valiona)
+        80627,  -- Stolen Power (Nefarian)
+        89421,  -- Wrack (Sinestra)
+        89435,  -- Wrack (Sinestra)
+        99256,  -- Torment (Baleroc)
+        99257,  -- Tormented (Baleroc)
+        99489,  -- Tormented (Baleroc)
+        98450   -- Searing Seeds (Majordomo Staghelm)
       }
     },
 
