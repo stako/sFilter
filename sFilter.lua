@@ -1,4 +1,5 @@
 local _, ns = ...
+if not ns.iconData then return end
 
 local UnitAura = UnitAura
 local class = select(2, UnitClass("player"))
@@ -105,21 +106,15 @@ local Icon = {
 }
 
 -- Build Icons
-if not ns.iconData then return end
-
 for _, category in ipairs({"GENERAL", class}) do
   for i, data in ipairs(ns.iconData[category]) do
     local icon = Icon:new(data, category, i)
     tinsert(icons, icon)
-  end
-end
-
-for _, icon in ipairs(icons) do
-  units[icon.unit] = icon.unit
-
-  for spellId, _ in pairs(icon.spells) do
-    spells[spellId] = spells[spellId] or {}
-    tinsert(spells[spellId], icon)
+    units[icon.unit] = icon.unit
+    for spellId in pairs(icon.spells) do
+      spells[spellId] = spells[spellId] or {}
+      tinsert(spells[spellId], icon)
+    end
   end
 end
 
