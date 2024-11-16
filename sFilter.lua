@@ -3,6 +3,7 @@ if not ns.iconData then return end
 
 local UnitAura = UnitAura
 local class = select(2, UnitClass("player"))
+local hideQueue = {}
 local icons = {}
 local spells = {}
 local units = {}
@@ -25,16 +26,19 @@ local Icon = {
     return obj
   end,
 
-  Hide = function(self)
-    self.frame:Hide()
-    self.curPriority = 999
-  end,
-
   Build = function(self, category, id)
     local frame = CreateFrame("Frame", "sFilter_" .. category .. id, UIParent)
     frame:SetSize(self.size, self.size)
     frame:SetPoint(unpack(self.setPoint))
     frame:SetAlpha(self.alpha)
+    frame:Hide()
+
+    local anim = frame:CreateAnimationGroup()
+    local scaleAnim = anim:CreateAnimation("Scale")
+    scaleAnim:SetScript("OnFinished", function() if self.active then frame:Show() self.cooldown:Show() else frame:Hide() end end)
+    scaleAnim:SetScaleFrom(0, 0)
+    scaleAnim:SetScaleTo(1, 1)
+    scaleAnim:SetDuration(0.1)
 
     local texture = frame:CreateTexture(nil, "ARTWORK")
     texture:SetAllPoints()
@@ -81,25 +85,28 @@ local Icon = {
     end
 
     self.frame = frame
+    self.anim = anim
     self.texture = texture
     self.count = count
     self.cooldown = cooldown
-
-    self:Hide()
+    self.curPriority = 999
   end,
 
   HandleSpell = function(self, texture, count, duration, expirationTime, caster, spellId)
     if self.isMine and not myUnits[caster] then return end
     if self.curPriority < self.spells[spellId] then return end
 
+    hideQueue[self] = nil
     self.curPriority = self.spells[spellId]
-    self.frame:Show()
     self.texture:SetTexture(texture)
     self.count:SetText(count > 1 and count or "")
     if duration and duration > 0 then
-      self.cooldown:Show()
       self.cooldown:SetCooldown(expirationTime - duration, duration)
-    else
+    end
+    if not self.active then
+      self.active = true
+      self.frame:Show()
+      self.anim:Play()
       self.cooldown:Hide()
     end
   end
@@ -134,13 +141,21 @@ end
 
 local function scanUnit(unit)
   for _, icon in ipairs(icons) do
-    if icon.unit == unit then
-      icon:Hide()
+    if icon.unit == unit and icon.active then
+      icon.curPriority = 999
+      hideQueue[icon] = true
     end
   end
 
   scanAuras(unit, "HELPFUL")
   scanAuras(unit, "HARMFUL")
+
+  for icon in pairs(hideQueue) do
+    icon.active = false
+    icon.cooldown:Clear()
+    icon.anim:Play(true)
+    hideQueue[icon] = nil
+  end
 end
 
 local eventHandler = CreateFrame("Frame")
