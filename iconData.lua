@@ -16,11 +16,11 @@ ns.iconData = {
         80627,  -- Stolen Power (Nefarian)
         89421,  -- Wrack (Sinestra)
         89435,  -- Wrack (Sinestra)
+        99461,  -- Blazing Power (Alysrazor)
         99256,  -- Torment (Baleroc)
         99257,  -- Tormented (Baleroc)
         99489,  -- Tormented (Baleroc)
-        98450,  -- Searing Seeds (Majordomo Staghelm)
-        98443   -- Fiery Cyclone (Majordomo Staghelm)
+        98450   -- Searing Seeds (Majordomo Staghelm)
       }
     },
 
