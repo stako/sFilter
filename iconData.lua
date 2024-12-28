@@ -17,6 +17,7 @@ ns.iconData = {
         89421,  -- Wrack (Sinestra)
         89435,  -- Wrack (Sinestra)
         99461,  -- Blazing Power (Alysrazor)
+        99516,  -- Countdown (Baleroc)
         99256,  -- Torment (Baleroc)
         99257,  -- Tormented (Baleroc)
         99489,  -- Tormented (Baleroc)
