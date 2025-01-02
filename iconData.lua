@@ -21,7 +21,8 @@ ns.iconData = {
         99256,  -- Torment (Baleroc)
         99257,  -- Tormented (Baleroc)
         99489,  -- Tormented (Baleroc)
-        98450   -- Searing Seeds (Majordomo Staghelm)
+        98450,  -- Searing Seeds (Majordomo Staghelm)
+        98245   -- Legendary Concentration (Majordomo Staghelm)
       }
     },
 
