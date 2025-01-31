@@ -21,8 +21,9 @@ ns.iconData = {
         99256,  -- Torment (Baleroc)
         99257,  -- Tormented (Baleroc)
         99489,  -- Tormented (Baleroc)
-        98450,  -- Searing Seeds (Majordomo Staghelm)
-        98245   -- Legendary Concentration (Majordomo Staghelm)
+        -- 98450,  -- Searing Seeds (Majordomo Staghelm)
+        98245,   -- Legendary Concentration (Majordomo Staghelm)
+        100594   -- Superheated (Ragnaros)
       }
     },
 
@@ -97,8 +98,8 @@ ns.iconData = {
     -- Empowered Shadow
     {spells = {95799}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 98, -18}},
 
-    -- Dark Evangelism
-    {spells = {87118}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 124, -18}},
+    -- Evangelism, Dark Evangelism
+    {spells = {81661, 87118}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 124, -18}},
 
     -- Shadow Word: Pain
     {spells = {589}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 150, -18}},
@@ -113,10 +114,10 @@ ns.iconData = {
     {spells = {77487}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
 
     -- Surge of Dominance
-    {spells = {92218, 85027}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -145, -28}},
+    -- {spells = {92218, 85027}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -145, -28}},
 
     -- Power Torrent
-    {spells = {74241}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -119, -28}},
+    -- {spells = {74241}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -119, -28}},
   },
   ["ROGUE"] = {
     -- Stealth / Dance / Vanish / Envenom / Deep Insight
