@@ -1,3 +1,4 @@
+if WOW_PROJECT_ID ~= WOW_PROJECT_CATACLYSM_CLASSIC then return end
 local _, ns = ...
 
 ns.borderStyle = 2
@@ -132,7 +133,7 @@ ns.iconData = {
     -- Blade Flurry / Overkill / Feint
     {spells = {13877, 58427, 1966}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 150, -18}},
 
-    -- Revealing Strike / Rupture
+    -- Rupture
     {spells = {1943}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 176, -18}},
 
     -- Hemorrhage / Revealing Strike
@@ -151,5 +152,11 @@ ns.iconData = {
     -- Bane of Agony / Bane of Doom
     {spells = {980, 603}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, -18}},
   },
-  ["WARRIOR"] = {},
+  ["WARRIOR"] = {
+    -- Blood Surge
+    {spells = {413399}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
+
+    -- Sudden Death
+    {spells = {440114}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -170, 0}},
+  },
 }

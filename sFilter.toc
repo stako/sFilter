@@ -4,5 +4,6 @@
 ## Author: stako
 ## Version: 1.0
 
-iconData.lua
+iconDataVanilla.lua
+iconDataCata.lua
 sFilter.lua
