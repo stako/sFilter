@@ -26,5 +26,9 @@ ns.iconData = {
 
     -- Commanding Shout
     {spells = {403215}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 124, -18}},
+
+    -- Rend
+    {spells = {11572}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, -18}},
+
   },
 }
