@@ -22,7 +22,7 @@ ns.iconData = {
     {spells = {440114}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
 
     -- Battle Shout
-    {spells = {11549}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 98, -18}},
+    {spells = {11549, 11550}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 98, -18}},
 
     -- Commanding Shout
     {spells = {403215}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 124, -18}},
