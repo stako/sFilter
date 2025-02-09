@@ -54,7 +54,19 @@ ns.iconData = {
     -- Grounding Totem Effect
     {spells = {8178}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -170, 0}},
   },
-  ["DEATHKNIGHT"] = {},
+  ["DEATHKNIGHT"] = {
+    -- Crimson Scourge
+    {spells = {81141}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
+
+    -- Bone Shield
+    {spells = {49222}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 98, -18}},
+
+    -- Frost Fever
+    {spells = {55095}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 176, -18}},
+
+    -- Blood Plague
+    {spells = {55078}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, -18}},
+  },
   ["DRUID"] = {},
   ["HUNTER"] = {
     -- Aspect of the Pack / Aspect of the Cheetah / Camouflage
