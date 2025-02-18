@@ -155,20 +155,26 @@ ns.iconData = {
     {spells = {91021}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, 8}},
   },
   ["WARLOCK"] = {
+    -- Empowered Imp
+    {spells = {47283}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
+
+    -- Improved Soul Fire
+    {spells = {85383}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 98, -18}},
+
     -- Corruption
     {spells = {172}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 150, -18}},
 
-    -- Unstable Affliction
-    {spells = {30108}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 176, -18}},
+    -- Unstable Affliction / Immolate
+    {spells = {30108, 348}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 176, -18}},
 
     -- Bane of Agony / Bane of Doom
     {spells = {980, 603}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, -18}},
   },
   ["WARRIOR"] = {
-    -- Blood Surge
-    {spells = {413399}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
+    -- Battle Trance
+    {spells = {12964}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
 
-    -- Sudden Death
-    {spells = {440114}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -170, 0}},
+    -- Bloodsurge
+    {spells = {46916}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -170, 0}},
   },
 }
