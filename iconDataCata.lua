@@ -172,9 +172,15 @@ ns.iconData = {
   },
   ["WARRIOR"] = {
     -- Battle Trance
-    {spells = {12964}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
+    {spells = {12964}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -170, 0}},
 
-    -- Bloodsurge
-    {spells = {46916}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -170, 0}},
+    -- Bloodsurge, Taste for Blood
+    {spells = {46916, 60503}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
+
+    -- Colossus Smash
+    {spells = {86346}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 176, -18}},
+
+    -- Rend
+    {spells = {94009}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, -18}},
   },
 }
