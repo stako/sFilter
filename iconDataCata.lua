@@ -6,7 +6,7 @@ ns.borderStyle = 2
 ns.iconData = {
   ["GENERAL"] = {
     {
-      size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 123, 0},
+      size = 30, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", UIParent, "CENTER", 125, 0},
       spells = {
         94794,  -- Rocket Fuel Leak
         49206,  -- Summon Gargoyle
@@ -29,7 +29,7 @@ ns.iconData = {
     },
 
     {
-      size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 47},
+      size = 30, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, 36},
       spells = {
         642,    -- Divine Shield
         19263,  -- Deterrence
@@ -43,20 +43,20 @@ ns.iconData = {
   },
   ["SHAMAN"] = {
     -- Water Shield / Earth Shield
-    {spells = {52127, 974}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
+    {spells = {52127, 974}, size = 30, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, 0}},
 
     -- Tidal Waves
     {spells = {53390}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 98, -18}},
 
     -- Spiritwalker's Grace
-    {spells = {79206}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, -47}},
+    {spells = {79206}, size = 30, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, -36}},
 
     -- Grounding Totem Effect
-    {spells = {8178}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -170, 0}},
+    {spells = {8178}, size = 30, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -161, 0}},
   },
   ["DEATHKNIGHT"] = {
     -- Crimson Scourge
-    {spells = {81141}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
+    {spells = {81141}, size = 30, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, 0}},
 
     -- Bone Shield
     {spells = {49222}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 98, -18}},
@@ -70,13 +70,13 @@ ns.iconData = {
   ["DRUID"] = {},
   ["HUNTER"] = {
     -- Aspect of the Pack / Aspect of the Cheetah / Camouflage
-    {spells = {5118, 13159, 51755}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
+    {spells = {5118, 13159, 51755}, size = 30, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, 0}},
 
     -- Trap Launcher
-    {spells = {77769}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -170, 0}},
+    {spells = {77769}, size = 30, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -161, 0}},
 
     -- Fire! / Resistance is Futile!
-    {spells = {82926, 82897}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, -47}},
+    {spells = {82926, 82897}, size = 30, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, -36}},
 
     -- Mend Pet
     {spells = {136}, size = 22, alpha = 1, unit = "pet", isMine = false, setPoint = {"LEFT", PetFrame, "RIGHT", -8, -4}},
@@ -96,13 +96,13 @@ ns.iconData = {
   ["MAGE"] = {},
   ["PALADIN"] = {
     -- Infusion of Light / Daybreak / Crusader Aura
-    {spells = {54149, 88819, 32223}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
+    {spells = {54149, 88819, 32223}, size = 30, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, 0}},
 
     -- Avenging Wrath / Divine Favor / Guardian of Ancient Kings
-    {spells = {31884, 31842, 86669}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, -47}},
+    {spells = {31884, 31842, 86669}, size = 30, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, -36}},
 
     -- Aura Mastery
-    {spells = {31821}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -170, 0}},
+    {spells = {31821}, size = 30, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -161, 0}},
 
     -- Judgements of the Pure
     {spells = {53657}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 98, -18}},
@@ -124,7 +124,7 @@ ns.iconData = {
     {spells = {2944}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, -18}},
 
     -- Shadow Orb
-    {spells = {77487}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
+    {spells = {77487}, size = 30, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, 0}},
 
     -- Surge of Dominance
     -- {spells = {92218, 85027}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -145, -28}},
@@ -134,7 +134,7 @@ ns.iconData = {
   },
   ["ROGUE"] = {
     -- Stealth / Dance / Vanish / Envenom / Deep Insight
-    {spells = {1784, 51713, 11327, 84747}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
+    {spells = {1784, 51713, 11327, 84747}, size = 30, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, 0}},
 
     -- Recuperate
     {spells = {73651}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 98, -18}},
@@ -156,7 +156,7 @@ ns.iconData = {
   },
   ["WARLOCK"] = {
     -- Empowered Imp
-    {spells = {47283}, size = 40, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
+    {spells = {47283}, size = 30, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, 0}},
 
     -- Improved Soul Fire
     {spells = {85383}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 98, -18}},
@@ -172,10 +172,10 @@ ns.iconData = {
   },
   ["WARRIOR"] = {
     -- Battle Trance
-    {spells = {12964}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -170, 0}},
+    {spells = {12964}, size = 30, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -161, 0}},
 
     -- Bloodsurge, Taste for Blood
-    {spells = {46916, 60503}, size = 40, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -123, 0}},
+    {spells = {46916, 60503}, size = 30, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, 0}},
 
     -- Colossus Smash
     {spells = {86346}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 176, -18}},
