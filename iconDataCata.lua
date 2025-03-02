@@ -120,8 +120,8 @@ ns.iconData = {
     -- Vampiric Touch
     {spells = {34914}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 176, -18}},
 
-    -- Devouring Plague
-    {spells = {2944}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, -18}},
+    -- Devouring Plague / Grace
+    {spells = {2944, 77613}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, -18}},
 
     -- Shadow Orb
     {spells = {77487}, size = 30, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, 0}},
@@ -176,6 +176,12 @@ ns.iconData = {
 
     -- Bloodsurge, Taste for Blood
     {spells = {46916, 60503}, size = 30, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, 0}},
+
+    -- Slaughter
+    {spells = {84586}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 98, -18}},
+
+    -- Sweeping Strikes
+    {spells = {12328}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 124, -18}},
 
     -- Colossus Smash
     {spells = {86346}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 176, -18}},
