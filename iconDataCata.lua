@@ -123,8 +123,8 @@ ns.iconData = {
     -- Devouring Plague / Grace
     {spells = {2944, 77613}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, -18}},
 
-    -- Shadow Orb
-    {spells = {77487}, size = 30, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, 0}},
+    -- Shadow Orb / Vital Flame / Vital Spark
+    {spells = {77487, 99263, 99262}, size = 30, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, 0}},
 
     -- Surge of Dominance
     -- {spells = {92218, 85027}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -145, -28}},
