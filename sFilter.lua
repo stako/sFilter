@@ -145,15 +145,15 @@ end
 
 local eventHandler = CreateFrame("Frame")
 eventHandler:RegisterUnitEvent("UNIT_AURA", unpack(units))
-eventHandler:RegisterEvent("PLAYER_TARGET_CHANGED")
 eventHandler:RegisterEvent("PLAYER_ENTERING_WORLD")
+if units["target"] then eventHandler:RegisterEvent("PLAYER_TARGET_CHANGED") end
 
 eventHandler:SetScript("OnEvent", function(self, event, ...)
   local unit = ...
 
   if event == "UNIT_AURA" and units[unit] then
     scanUnit(unit)
-  elseif event == "PLAYER_TARGET_CHANGED" and units["target"] then
+  elseif event == "PLAYER_TARGET_CHANGED" then
     scanUnit("target")
   elseif event == "PLAYER_ENTERING_WORLD" then
     for unit in pairs(units) do
