@@ -24,7 +24,8 @@ ns.iconData = {
         99489,  -- Tormented (Baleroc)
         -- 98450,  -- Searing Seeds (Majordomo Staghelm)
         98245,   -- Legendary Concentration (Majordomo Staghelm)
-        100594   -- Superheated (Ragnaros)
+        100594,  -- Superheated (Ragnaros)
+        110317   -- Watery Entrenchment (Hagara)
       }
     },
 
