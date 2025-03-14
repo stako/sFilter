@@ -25,7 +25,8 @@ ns.iconData = {
         -- 98450,  -- Searing Seeds (Majordomo Staghelm)
         98245,   -- Legendary Concentration (Majordomo Staghelm)
         100594,  -- Superheated (Ragnaros)
-        110317   -- Watery Entrenchment (Hagara)
+        110317,  -- Watery Entrenchment (Hagara)
+        105316   -- Ice Lance (Hagara)
       }
     },
 
