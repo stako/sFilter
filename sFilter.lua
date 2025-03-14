@@ -4,8 +4,8 @@ if not ns.iconData then return end
 local UnitAura = UnitAura
 local class = select(2, UnitClass("player"))
 local icons = {}
-local spells = {}
-local units = {}
+local iconsBySpell = {}
+local iconsByUnit = {}
 local myUnits = {
   player = true,
   vehicle = true,
@@ -110,11 +110,11 @@ for _, category in ipairs({"GENERAL", class}) do
   for i, data in ipairs(ns.iconData[category]) do
     local icon = Icon:new(data, category, i)
     tinsert(icons, icon)
-    units[icon.unit] = units[icon.unit] or {}
-    tinsert(units[icon.unit], icon)
+    iconsByUnit[icon.unit] = iconsByUnit[icon.unit] or {}
+    tinsert(iconsByUnit[icon.unit], icon)
     for spellId in pairs(icon.spells) do
-      spells[spellId] = spells[spellId] or {}
-      tinsert(spells[spellId], icon)
+      iconsBySpell[spellId] = iconsBySpell[spellId] or {}
+      tinsert(iconsBySpell[spellId], icon)
     end
   end
 end
@@ -123,8 +123,8 @@ local function scanAuras(unit, auraType)
   for i = 1, 40 do
     local _, texture, count, _, duration, expirationTime, caster, _, _, spellId = UnitAura(unit, i, auraType)
     if not spellId then break end
-    if spells[spellId] then
-      for _, icon in ipairs(spells[spellId]) do
+    if iconsBySpell[spellId] then
+      for _, icon in ipairs(iconsBySpell[spellId]) do
         if icon.unit == unit then
           icon:HandleSpell(texture, count, duration, expirationTime, caster, spellId)
         end
@@ -134,7 +134,7 @@ local function scanAuras(unit, auraType)
 end
 
 local function scanUnit(unit)
-  for _, icon in ipairs(units[unit]) do
+  for _, icon in ipairs(iconsByUnit[unit]) do
     icon:Hide()
   end
 
@@ -143,19 +143,19 @@ local function scanUnit(unit)
 end
 
 local eventHandler = CreateFrame("Frame")
-eventHandler:RegisterUnitEvent("UNIT_AURA", unpack(units))
+eventHandler:RegisterUnitEvent("UNIT_AURA", unpack(iconsByUnit))
 eventHandler:RegisterEvent("PLAYER_ENTERING_WORLD")
-if units["target"] then eventHandler:RegisterEvent("PLAYER_TARGET_CHANGED") end
+if iconsByUnit["target"] then eventHandler:RegisterEvent("PLAYER_TARGET_CHANGED") end
 
 eventHandler:SetScript("OnEvent", function(self, event, ...)
   local unit = ...
 
-  if event == "UNIT_AURA" and units[unit] then
+  if event == "UNIT_AURA" and iconsByUnit[unit] then
     scanUnit(unit)
   elseif event == "PLAYER_TARGET_CHANGED" then
     scanUnit("target")
   elseif event == "PLAYER_ENTERING_WORLD" then
-    for unit in pairs(units) do
+    for unit in pairs(iconsByUnit) do
       scanUnit(unit)
     end
   end
