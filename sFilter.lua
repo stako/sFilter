@@ -110,7 +110,8 @@ for _, category in ipairs({"GENERAL", class}) do
   for i, data in ipairs(ns.iconData[category]) do
     local icon = Icon:new(data, category, i)
     tinsert(icons, icon)
-    units[icon.unit] = icon.unit
+    units[icon.unit] = units[icon.unit] or {}
+    tinsert(units[icon.unit], icon)
     for spellId in pairs(icon.spells) do
       spells[spellId] = spells[spellId] or {}
       tinsert(spells[spellId], icon)
@@ -133,10 +134,8 @@ local function scanAuras(unit, auraType)
 end
 
 local function scanUnit(unit)
-  for _, icon in ipairs(icons) do
-    if icon.unit == unit then
-      icon:Hide()
-    end
+  for _, icon in ipairs(units[unit]) do
+    icon:Hide()
   end
 
   scanAuras(unit, "HELPFUL")
