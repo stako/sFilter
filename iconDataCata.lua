@@ -138,6 +138,9 @@ ns.iconData = {
     -- Stealth / Dance / Vanish / Envenom / Deep Insight
     {spells = {1784, 51713, 11327, 84747}, size = 30, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, 0}},
 
+    -- Fury of the Destroyer
+    {spells = {109949}, size = 30, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -161, 0}},
+
     -- Recuperate
     {spells = {73651}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 98, -18}},
 
