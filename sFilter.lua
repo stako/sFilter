@@ -143,14 +143,20 @@ local function scanUnit(unit)
 end
 
 local eventHandler = CreateFrame("Frame")
-eventHandler:RegisterUnitEvent("UNIT_AURA", unpack(iconsByUnit))
+do
+  local trackedUnits = {}
+  for unit in pairs(iconsByUnit) do
+    tinsert(trackedUnits, unit)
+    if unit == "target" then eventHandler:RegisterEvent("PLAYER_TARGET_CHANGED") end
+  end
+  eventHandler:RegisterUnitEvent("UNIT_AURA", unpack(trackedUnits))
+end
 eventHandler:RegisterEvent("PLAYER_ENTERING_WORLD")
-if iconsByUnit["target"] then eventHandler:RegisterEvent("PLAYER_TARGET_CHANGED") end
 
 eventHandler:SetScript("OnEvent", function(self, event, ...)
   local unit = ...
 
-  if event == "UNIT_AURA" and iconsByUnit[unit] then
+  if event == "UNIT_AURA" then
     scanUnit(unit)
   elseif event == "PLAYER_TARGET_CHANGED" then
     scanUnit("target")
