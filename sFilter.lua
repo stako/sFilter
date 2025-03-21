@@ -19,6 +19,7 @@ end
 local eventHandler = CreateFrame("Frame")
 eventHandler:RegisterEvent("ADDON_LOADED")
 if units["target"] then eventHandler:RegisterEvent("PLAYER_TARGET_CHANGED") end
+if units["pet"] then eventHandler:RegisterUnitEvent("UNIT_PET", "player") end
 do
   local trackedUnits = {}
   for unitToken in pairs(units) do
@@ -52,7 +53,7 @@ eventHandler:SetScript("OnEvent", function(self, event, ...)
       end
     end
 
-    if updateInfo.isFullUpdate then
+    if updateInfo.isFullUpdate and unitToken ~= "pet" then
       units[unitToken]:RemoveAllAuras()
       units[unitToken]:AddAllAuras()
     end
@@ -63,5 +64,8 @@ eventHandler:SetScript("OnEvent", function(self, event, ...)
     for unitToken, unit in pairs(units) do
       if UnitExists(unitToken) then unit:AddAllAuras() end
     end
+  elseif event == "UNIT_PET" then
+    units["pet"]:RemoveAllAuras()
+    if UnitExists("pet") then units["pet"]:AddAllAuras() end
   end
 end)
