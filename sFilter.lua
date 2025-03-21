@@ -17,7 +17,7 @@ for _, category in ipairs({"GENERAL", class}) do
 end
 
 local eventHandler = CreateFrame("Frame")
-eventHandler:RegisterEvent("PLAYER_ENTERING_WORLD")
+eventHandler:RegisterEvent("ADDON_LOADED")
 if units["target"] then eventHandler:RegisterEvent("PLAYER_TARGET_CHANGED") end
 do
   local trackedUnits = {}
@@ -51,12 +51,16 @@ eventHandler:SetScript("OnEvent", function(self, event, ...)
         units[unitToken]:RemoveAura(removedAuraInstanceIDs[i])
       end
     end
+
+    if updateInfo.isFullUpdate then
+      units[unitToken]:RemoveAllAuras()
+      units[unitToken]:AddAllAuras()
+    end
   elseif event == "PLAYER_TARGET_CHANGED" then
     units["target"]:RemoveAllAuras()
     if UnitExists("target") then units["target"]:AddAllAuras() end
-  elseif event == "PLAYER_ENTERING_WORLD" then
+  elseif event == "ADDON_LOADED" then
     for unitToken, unit in pairs(units) do
-      unit:RemoveAllAuras()
       if UnitExists(unitToken) then unit:AddAllAuras() end
     end
   end
