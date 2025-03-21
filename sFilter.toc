@@ -6,4 +6,6 @@
 
 iconDataVanilla.lua
 iconDataCata.lua
+unit.lua
+icon.lua
 sFilter.lua
