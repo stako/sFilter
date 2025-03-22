@@ -46,6 +46,8 @@ function Unit:AddAura(auraData)
 end
 
 function Unit:UpdateAura(auraData)
+  if not auraData then return end
+
   local icons = self.iconsByAuraInstanceID[auraData.auraInstanceID]
   if not icons then return end
 
