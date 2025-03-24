@@ -16,6 +16,45 @@ for _, category in ipairs({"GENERAL", class}) do
   end
 end
 
+local function handleUnitAura(unitToken, updateInfo)
+  if updateInfo.addedAuras then
+    for _, aura in ipairs(updateInfo.addedAuras) do
+      units[unitToken]:AddAura(aura)
+    end
+  end
+
+  if updateInfo.updatedAuraInstanceIDs then
+    for _, auraID in ipairs(updateInfo.updatedAuraInstanceIDs) do
+      units[unitToken]:UpdateAura(C_UnitAuras.GetAuraDataByAuraInstanceID(unitToken, auraID))
+    end
+  end
+
+  if updateInfo.removedAuraInstanceIDs then
+    for _, auraID in ipairs(updateInfo.removedAuraInstanceIDs) do
+      units[unitToken]:RemoveAura(auraID)
+    end
+  end
+
+  if updateInfo.isFullUpdate and unitToken ~= "pet" then
+    units[unitToken]:RemoveAllAuras()
+    units[unitToken]:AddAllAuras()
+  end
+end
+
+local function refreshUnitAuras(unitToken)
+  units[unitToken]:RemoveAllAuras()
+  if UnitExists(unitToken) then
+    units[unitToken]:AddAllAuras()
+  end
+end
+
+local function handleTalentChange()
+  ns.spec = GetPrimaryTalentTree()
+  for unitToken, _ in pairs(units) do
+    refreshUnitAuras(unitToken)
+  end
+end
+
 local eventHandler = CreateFrame("Frame")
 eventHandler:RegisterEvent("ADDON_LOADED")
 eventHandler:RegisterEvent("ACTIVE_TALENT_GROUP_CHANGED")
@@ -32,54 +71,19 @@ end
 
 eventHandler:SetScript("OnEvent", function(self, event, ...)
   if event == "UNIT_AURA" then
-    local unitToken, updateInfo = ...
-
-    local addedAuras = updateInfo.addedAuras
-    if addedAuras then
-      for i = 1, #addedAuras do
-        units[unitToken]:AddAura(addedAuras[i])
-      end
-    end
-
-    local updatedAuraInstanceIDs = updateInfo.updatedAuraInstanceIDs
-    if updatedAuraInstanceIDs then
-      for i = 1, #updatedAuraInstanceIDs do
-        units[unitToken]:UpdateAura(C_UnitAuras.GetAuraDataByAuraInstanceID(unitToken, updatedAuraInstanceIDs[i]))
-      end
-    end
-
-    local removedAuraInstanceIDs = updateInfo.removedAuraInstanceIDs
-    if removedAuraInstanceIDs then
-      for i = 1, #removedAuraInstanceIDs do
-        units[unitToken]:RemoveAura(removedAuraInstanceIDs[i])
-      end
-    end
-
-    if updateInfo.isFullUpdate and unitToken ~= "pet" then
-      units[unitToken]:RemoveAllAuras()
-      units[unitToken]:AddAllAuras()
-    end
+    handleUnitAura(...)
   elseif event == "PLAYER_TARGET_CHANGED" then
-    units["target"]:RemoveAllAuras()
-    if UnitExists("target") then units["target"]:AddAllAuras() end
+    refreshUnitAuras("target")
   elseif event == "PLAYER_ENTERING_WORLD" then
     self:UnregisterEvent("PLAYER_ENTERING_WORLD")
     ns.spec = GetPrimaryTalentTree()
   elseif event == "ACTIVE_TALENT_GROUP_CHANGED" then
-    ns.spec = GetPrimaryTalentTree()
-    for unitToken, unit in pairs(units) do
-      unit:RemoveAllAuras()
-      if UnitExists(unitToken) then unit:AddAllAuras() end
-    end
-  elseif event == "ADDON_LOADED" then
-    local name = ...
-    if name ~= addonName then return end
-
+    handleTalentChange()
+  elseif event == "ADDON_LOADED" and ... == addonName then
     for unitToken, unit in pairs(units) do
       if UnitExists(unitToken) then unit:AddAllAuras() end
     end
   elseif event == "UNIT_PET" then
-    units["pet"]:RemoveAllAuras()
-    if UnitExists("pet") then units["pet"]:AddAllAuras() end
+    refreshUnitAuras("pet")
   end
 end)
