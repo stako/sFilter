@@ -1,4 +1,4 @@
-local _, ns = ...
+local addonName, ns = ...
 if not ns.iconData then return end
 
 ns.borderStyle = 2
@@ -61,6 +61,9 @@ eventHandler:SetScript("OnEvent", function(self, event, ...)
     units["target"]:RemoveAllAuras()
     if UnitExists("target") then units["target"]:AddAllAuras() end
   elseif event == "ADDON_LOADED" then
+    local name = ...
+    if name ~= addonName then return end
+
     for unitToken, unit in pairs(units) do
       if UnitExists(unitToken) then unit:AddAllAuras() end
     end
