@@ -18,6 +18,8 @@ end
 
 local eventHandler = CreateFrame("Frame")
 eventHandler:RegisterEvent("ADDON_LOADED")
+eventHandler:RegisterEvent("ACTIVE_TALENT_GROUP_CHANGED")
+eventHandler:RegisterEvent("PLAYER_ENTERING_WORLD")
 if units["target"] then eventHandler:RegisterEvent("PLAYER_TARGET_CHANGED") end
 if units["pet"] then eventHandler:RegisterUnitEvent("UNIT_PET", "player") end
 do
@@ -60,6 +62,15 @@ eventHandler:SetScript("OnEvent", function(self, event, ...)
   elseif event == "PLAYER_TARGET_CHANGED" then
     units["target"]:RemoveAllAuras()
     if UnitExists("target") then units["target"]:AddAllAuras() end
+  elseif event == "PLAYER_ENTERING_WORLD" then
+    self:UnregisterEvent("PLAYER_ENTERING_WORLD")
+    ns.spec = GetPrimaryTalentTree()
+  elseif event == "ACTIVE_TALENT_GROUP_CHANGED" then
+    ns.spec = GetPrimaryTalentTree()
+    for unitToken, unit in pairs(units) do
+      unit:RemoveAllAuras()
+      if UnitExists(unitToken) then unit:AddAllAuras() end
+    end
   elseif event == "ADDON_LOADED" then
     local name = ...
     if name ~= addonName then return end

@@ -36,7 +36,7 @@ function Unit:AddAura(auraData)
 
   for i = 1, #icons do
     local icon = icons[i]
-    if not icon.isMine or myUnits[auraData.sourceUnit] then
+    if (not icon.spec or icon.spec == ns.spec) and (not icon.isMine or myUnits[auraData.sourceUnit]) then
       tinsert(t, icon)
       icon:AddAura(auraData)
     end

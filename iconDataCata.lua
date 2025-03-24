@@ -111,7 +111,7 @@ ns.iconData = {
     -- Empowered Shadow
     {spells = {95799}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 98, -18}},
 
-    -- Evangelism, Dark Evangelism
+    -- Evangelism / Dark Evangelism
     {spells = {81661, 87118}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 124, -18}},
 
     -- Shadow Word: Pain
@@ -177,7 +177,7 @@ ns.iconData = {
     -- Battle Trance
     {spells = {12964}, size = 30, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -161, 0}},
 
-    -- Bloodsurge, Taste for Blood
+    -- Bloodsurge / Taste for Blood
     {spells = {46916, 60503}, size = 30, alpha = 1, unit = "player", isMine = true, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, 0}},
 
     -- Slaughter
@@ -188,6 +188,12 @@ ns.iconData = {
 
     -- Colossus Smash
     {spells = {86346}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 176, -18}},
+
+    -- Thunder Clap / Frost Fever / Judgements of the Just / Infected Wounds / Dust Cloud
+    {spells = {6343, 55095, 68055, 58180, 54404}, size = 22, alpha = 1, unit = "target", spec = 3, isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 176, -18}},
+
+    -- Demoralizing Shout / Demoralizing Roar / Vindication / Scarlet Fever
+    {spells = {1160, 99, 50256, 26017, 81130}, size = 22, alpha = 1, unit = "target", spec = 3, isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 150, -18}},
 
     -- Rend
     {spells = {94009}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, -18}},
