@@ -48,10 +48,6 @@ function Icon:Build(category, id)
 
     texture:SetTexCoord(0.07, 0.93, 0.07, 0.93)
     applications:SetPoint("BOTTOMRIGHT", 0, 1)
-
-    cooldown:ClearAllPoints()
-    cooldown:SetPoint("TOPLEFT", pixel, -pixel)
-    cooldown:SetPoint("BOTTOMRIGHT", -pixel, pixel)
   elseif ns.borderStyle == 3 then
     local background = frame:CreateTexture(nil, "BACKGROUND")
     background:SetAllPoints()
