@@ -24,7 +24,8 @@ ns.iconData = {
         98245,   -- Legendary Concentration (Majordomo Staghelm)
         100594,  -- Superheated (Ragnaros)
         110317,  -- Watery Entrenchment (Hagara)
-        105316   -- Ice Lance (Hagara)
+        105316,  -- Ice Lance (Hagara)
+        107439   -- Twilight Barrage (Warmaster Blackhorn)
       }
     },
 
