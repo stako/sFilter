@@ -43,8 +43,8 @@ ns.iconData = {
     }
   },
   ["SHAMAN"] = {
-    -- Water Shield / Earth Shield
-    {spells = {52127, 974}, size = 30, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, 0}},
+    -- Water Shield / Earth Shield / Lightning Shield
+    {spells = {52127, 974, 324}, size = 30, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -125, 0}},
 
     -- Tidal Waves
     {spells = {53390}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 98, -18}},
@@ -54,6 +54,10 @@ ns.iconData = {
 
     -- Grounding Totem Effect
     {spells = {8178}, size = 30, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMRIGHT", UIParent, "CENTER", -161, 0}},
+
+    -- Flame Shock
+    {spells = {8050}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, -18}},
+
   },
   ["DEATHKNIGHT"] = {
     -- Crimson Scourge
