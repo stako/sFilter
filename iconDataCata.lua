@@ -192,7 +192,7 @@ ns.iconData = {
     {spells = {12328}, size = 22, alpha = 1, unit = "player", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 124, -18}},
 
     -- Colossus Smash
-    {spells = {86346}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 176, -18}},
+    {spells = {86346, 108126}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 176, -18}},
 
     -- Thunder Clap / Frost Fever / Judgements of the Just / Infected Wounds / Dust Cloud
     {spells = {6343, 55095, 68055, 58180, 54404}, size = 22, alpha = 1, unit = "target", spec = 3, isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 176, -18}},
