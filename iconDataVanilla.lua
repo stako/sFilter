@@ -6,7 +6,13 @@ ns.iconData = {
   ["SHAMAN"] = {},
   ["DEATHKNIGHT"] = {},
   ["DRUID"] = {},
-  ["HUNTER"] = {},
+  ["HUNTER"] = {
+    -- Serpent Sting
+    {spells = {1978}, size = 22, alpha = 1, unit = "target", isMine = true, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 176, -18}},
+
+    -- Hunter's Mark
+    {spells = {1130}, size = 22, alpha = 1, unit = "target", isMine = false, setPoint = {"BOTTOMLEFT", PlayerFrame, "TOPLEFT", 202, -18}},
+  },
   ["MAGE"] = {},
   ["PALADIN"] = {},
   ["PRIEST"] = {},
