@@ -66,7 +66,10 @@ do
   for unitToken in pairs(units) do
     tinsert(trackedUnits, unitToken)
   end
-  eventHandler:RegisterUnitEvent("UNIT_AURA", unpack(trackedUnits))
+
+  if #trackedUnits > 0 then
+    eventHandler:RegisterUnitEvent("UNIT_AURA", unpack(trackedUnits))
+  end
 end
 
 eventHandler:SetScript("OnEvent", function(self, event, ...)
